@@ -1,0 +1,103 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/tangx/Desktop/I2C_Slave/tmp/I2C_Slave/tb
+T_opt
+!s110 1675926346
+VP^nNamWBT2AJOzkcf_fjI2
+04 7 4 work last_tb fast 0
+=1-a02942338abf-63e49b49-3e3-5ac
+o-quiet -auto_acc_if_foreign -work work -L rtl_work -L work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.7;67
+vi2c_top
+Z2 !s110 1675926345
+!i10b 1
+!s100 0g61RVOle1KJgoSFUPPH=0
+IP<1V?UKT^Ze2>IRGK7U741
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1652781815
+8../rtl/i2c_top.v
+F../rtl/i2c_top.v
+L0 11
+Z4 OL;L;10.7;67
+r1
+!s85 0
+31
+Z5 !s108 1675926345.000000
+Z6 !s107 ../rtl/smg_ctrl.v|../rtl/slave_2.v|../rtl/i2c_top.v|
+Z7 !s90 -reportprogress|300|../rtl/i2c_top.v|../rtl/slave_2.v|../rtl/smg_ctrl.v|
+!i113 0
+Z8 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vlast_tb
+R2
+!i10b 1
+!s100 gTD@H6@mmkKFz`hO;V54_0
+IO[`Lf>DT1nCc=cXnaXE161
+R3
+R0
+w1652856453
+8last_tb.v
+Flast_tb.v
+L0 20
+R4
+r1
+!s85 0
+31
+R5
+!s107 last_tb.v|
+!s90 -reportprogress|300|last_tb.v|
+!i113 0
+R8
+R1
+vslave_2
+R2
+!i10b 1
+!s100 ]lmOMafT1NEdafaoJG3>a2
+IOhUZ_:SDlLF2n40E?<i<N2
+R3
+R0
+w1652858237
+8../rtl/slave_2.v
+F../rtl/slave_2.v
+L0 30
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1
+vsmg_ctrl
+R2
+!i10b 1
+!s100 MXgX>]ndZf[GSabZ=]llA3
+ITH@6^<<c[_0HhCKK6ebYC3
+R3
+R0
+w1649918728
+8../rtl/smg_ctrl.v
+F../rtl/smg_ctrl.v
+L0 9
+R4
+r1
+!s85 0
+31
+R5
+R6
+R7
+!i113 0
+R8
+R1

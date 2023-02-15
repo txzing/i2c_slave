@@ -1,0 +1,1 @@
+exec quartus_cpf -c jicgen.cof
