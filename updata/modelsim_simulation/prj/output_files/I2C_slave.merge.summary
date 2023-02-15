@@ -1,0 +1,14 @@
+Partition Merge Status : Successful - Tue May 17 18:04:05 2022
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Standard Edition
+Revision Name : I2C_slave
+Top-level Entity Name : i2c_top
+Family : Cyclone IV E
+Total logic elements : 206
+    Total combinational functions : 166
+    Dedicated logic registers : 105
+Total registers : 105
+Total pins : 18
+Total virtual pins : 0
+Total memory bits : 128
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
