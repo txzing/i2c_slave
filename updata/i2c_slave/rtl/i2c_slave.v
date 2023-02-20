@@ -385,7 +385,7 @@ reset_sync  u_reset_sync  //异步复位同步释放
 				end 
 				// START:
 				JUG_RW:begin 
-					if(send_ack_flag && (data_r[7:1]==device_addr))begin
+					if(send_ack_flag && (data_r[7:1]==device_addr)begin
                         sda_oe 	 <= 1'b1;//接收总线控制权，发送应答位
 						sda_o 	 <= 1'b0;				
 					end                 
@@ -404,7 +404,8 @@ reset_sync  u_reset_sync  //异步复位同步释放
                             sda_o 	 <= 1'b1;                    
                         end 
                     end                    
-                    else begin
+                    else 
+                    begin
                         sda_oe 	 <= sda_oe;
                         sda_o 	 <= sda_o;  
                     end             
