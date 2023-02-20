@@ -44,6 +44,7 @@ module 	i2c_slave
 #(
     parameter   I2C_SLAVE_ADDR      = 7'b0110110,   //7bit i2c slave addr
     parameter   REG_DEVICE_ADDR     = 16'h0000  ,   //设备地址的寄存器地址
+    parameter   DEVICE_ADDR_BIT     = 1'b0      ,   //写入REG_DEVICE_ADDR的7位device_addr值，存放在低7位还是高7位,0代表低7位
     parameter   I2C_SLAVE_REG_MODE  = 1'b0      ,   // i2c reg width,1-16bit, 0-8bit
     parameter   I2C_SLAVE_DAT_MODE  = 1'b0      ,   // i2c reg width, 2-32bit, 1-16bit, 0-8bit  //预留
     parameter   SDA_T_POLARITY      = 1'b0          // sda的输出极性，高电平作为输出，还是低电平作为输出
@@ -195,9 +196,6 @@ reset_sync  u_reset_sync  //异步复位同步释放
 				end                 
 				else if(jug_rw2rd_dat)begin
 					state_n = RD_DAT;
-				end 
-				else if(jug_rw2idle)begin //未接收到正确指令
-					state_n = IDLE; 
 				end 
 				else begin
 					state_n = JUG_RW;	
@@ -387,23 +385,27 @@ reset_sync  u_reset_sync  //异步复位同步释放
 				end 
 				// START:
 				JUG_RW:begin 
-					if(send_ack_flag && (data_r[7:1]==device_addr))begin
+					if(send_ack_flag && (data_r[7:1]==device_addr)begin
                         sda_oe 	 <= 1'b1;//接收总线控制权，发送应答位
 						sda_o 	 <= 1'b0;				
-					end
-					else if(send_ack_flag && (data_r[7:1]!=device_addr))begin//若从机地址不对，则不应答
-						sda_oe 	 <= 1'b1;//接收总线控制权，给出非应答
-                        sda_o 	 <= 1'b1;
-					end                    
-					else if(end_9b && (data_r == RD_CTRL_WORD))begin //应答位发送完成
-                        sda_oe 	 <= 1'b1;//如果接受的是读指令，则不必释放总线，从机准备发数据
-                        sda_o 	 <= 1'b0;  
-                    end 
-					else if(end_9b && (data_r == WR_CTRL_WORD))begin //应答位发送完成
+					end                 
+					else if(end_9b)
+                    begin
+                        if(data_r == RD_CTRL_WORD))begin
+                            sda_oe 	 <= 1'b1;//如果接受的是读指令，则不必释放总线，从机准备发数据
+                            sda_o 	 <= 1'b0;  
+                        end 
+                        else if((data_r == WR_CTRL_WORD))begin //应答位发送完成
                         sda_oe 	 <= 1'b0;//应答位发送完成，释放总线控制权
                         sda_o 	 <= 1'b1;  
-                    end                           
-                    else begin
+                        end    
+                        else begin	//其他地址的操作，则释放总线				
+                            sda_oe 	 <= 1'b0;	
+                            sda_o 	 <= 1'b1;                    
+                        end 
+                    end                    
+                    else 
+                    begin
                         sda_oe 	 <= sda_oe;
                         sda_o 	 <= sda_o;  
                     end             
@@ -602,7 +604,12 @@ reset_sync  u_reset_sync  //异步复位同步释放
             device_addr <= I2C_SLAVE_ADDR;//7位地址
         end
         else if(state_c == WR_DAT && wr_vld && (reg_addr == REG_DEVICE_ADDR))begin
-            device_addr <= data_r[6:0];//取低7位
+            if(DEVICE_ADDR_BIT)begin
+                device_addr <= data_r[7:1];//取高7位
+            end
+            else begin
+                device_addr <= data_r[6:0];//取低7位
+            end   
         end
         else begin
             device_addr <= device_addr;
@@ -664,7 +671,7 @@ reset_sync  u_reset_sync  //异步复位同步释放
         if (jug_rw2rd_dat || rd_vld) // --- I2C Read
         begin
             case (reg_addr)
-                16'h0000: rd_data <= {1'b0,device_addr};//可读设备地址
+                16'h0000: rd_data <= DEVICE_ADDR_BIT?{device_addr,1'b0}:{1'b0,device_addr};//可读设备地址
                 16'h0001: rd_data <= ROReg0        ;  
                 16'h0002: rd_data <= ROReg1        ;  
                 16'h0003: rd_data <= ROReg2        ;  
@@ -708,7 +715,7 @@ reset_sync  u_reset_sync  //异步复位同步释放
                 16'h700D: rd_data <= memory[33][7:0];
                 16'h700E: rd_data <= memory[34][7:0];
                 16'h700F: rd_data <= memory[35][7:0]; 
-                REG_DEVICE_ADDR : rd_data <= {1'b0,device_addr};//可读写的设备地址               
+                REG_DEVICE_ADDR : rd_data <= DEVICE_ADDR_BIT?{device_addr,1'b0}:{1'b0,device_addr};//可读设备地址              
                 
             default: rd_data <= 8'hFF; // i2c读非法内部地址, 返回0xff
             endcase

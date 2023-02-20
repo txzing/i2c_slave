@@ -1,0 +1,26 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x0",
+      "device": "xczu3eg-sfvc784-1-i",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1"
+    },
+    "design_tree": {
+      "i2c_slave_0": ""
+    },
+    "components": {
+      "i2c_slave_0": {
+        "vlnv": "xilinx.com:user:FAKE_EEPROM_OX03C10:1.0",
+        "xci_name": "design_1_i2c_slave_0_0",
+        "parameters": {
+          "I2C_SLAVE_REG_MODE": {
+            "value": "\"1\""
+          }
+        }
+      }
+    }
+  }
+}
