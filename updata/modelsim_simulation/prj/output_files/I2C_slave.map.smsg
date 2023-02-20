@@ -1,0 +1,1 @@
+Info (10281): Verilog HDL Declaration information at slave_2.v(62): object "RW_ADDR" differs only in case from object "RW_Addr" in the same scope File: D:/BaiduNetdiskWorkspace/Adolph_Study/I2C_Slave/rtl/slave_2.v Line: 62

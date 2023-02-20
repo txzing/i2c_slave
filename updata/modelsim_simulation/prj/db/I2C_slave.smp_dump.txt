@@ -1,0 +1,10 @@
+
+State Machine - |i2c_top|slave_2:i2c_slave|state_c
+Name state_c.STOP state_c.RD_DAT state_c.WR_DAT state_c.RW_ADDR state_c.JUG_RW state_c.START state_c.IDLE 
+state_c.IDLE 0 0 0 0 0 0 0 
+state_c.START 0 0 0 0 0 1 1 
+state_c.JUG_RW 0 0 0 0 1 0 1 
+state_c.RW_ADDR 0 0 0 1 0 0 1 
+state_c.WR_DAT 0 0 1 0 0 0 1 
+state_c.RD_DAT 0 1 0 0 0 0 1 
+state_c.STOP 1 0 0 0 0 0 1 
