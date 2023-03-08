@@ -385,17 +385,16 @@ reset_sync  u_reset_sync  //异步复位同步释放
 				end 
 				// START:
 				JUG_RW:begin 
-					if(send_ack_flag && (data_r[7:1]==device_addr)begin
+					if(send_ack_flag && (data_r[7:1]==device_addr))begin
                         sda_oe 	 <= 1'b1;//接收总线控制权，发送应答位
 						sda_o 	 <= 1'b0;				
 					end                 
-					else if(end_9b)
-                    begin
-                        if(data_r == RD_CTRL_WORD))begin
+                    else if(end_9b)begin
+                        if(data_r == RD_CTRL_WORD)begin
                             sda_oe 	 <= 1'b1;//如果接受的是读指令，则不必释放总线，从机准备发数据
                             sda_o 	 <= 1'b0;  
                         end 
-                        else if((data_r == WR_CTRL_WORD))begin //应答位发送完成
+                        else if(data_r == WR_CTRL_WORD)begin //应答位发送完成
                         sda_oe 	 <= 1'b0;//应答位发送完成，释放总线控制权
                         sda_o 	 <= 1'b1;  
                         end    
@@ -404,8 +403,7 @@ reset_sync  u_reset_sync  //异步复位同步释放
                             sda_o 	 <= 1'b1;                    
                         end 
                     end                    
-                    else 
-                    begin
+                    else begin
                         sda_oe 	 <= sda_oe;
                         sda_o 	 <= sda_o;  
                     end             
@@ -638,6 +636,7 @@ reset_sync  u_reset_sync  //异步复位同步释放
         memory[5]      <=   8'hB5; 
         memory[6]      <=   8'hB6; 
         memory[7]      <=   8'hB7; 	
+/****************************************/        
         memory[8]      <=   8'h58;
         memory[9]      <=   8'h03;
         memory[10]     <=   8'h43;

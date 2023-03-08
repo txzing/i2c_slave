@@ -1,5 +1,0 @@
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="tangx" Host="TX" Pid="21404" HostCore="16" HostMemory="033974362112">
-    </Process>
-</ProcessHandle>
