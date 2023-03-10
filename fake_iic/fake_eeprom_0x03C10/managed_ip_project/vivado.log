@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Mar 10 13:38:38 2023
+# Process ID: 28616
+# Current directory: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28404 C:\Users\tangx\Desktop\fake_eeprom_0x03c10\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project/vivado.log
+# Journal file: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tangx/Desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/tangx/Desktop/fake_eeprom/managed_ip_project' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory 'C:/Users/tangx/Desktop/fake_eeprom'.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/tangx/Desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.srcs/sources_1', nor could it be found using path 'C:/Users/tangx/Desktop/fake_eeprom/managed_ip_project/managed_ip_project.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/tangx/Desktop/fake_eeprom'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:08 . Memory (MB): peak = 1061.758 ; gain = 0.000
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/tangx/Desktop/fake_eeprom'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/tangx/Desktop/fake_eeprom_0x03C10 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/tangx/Desktop/fake_eeprom_0x03C10'.
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_v1_0_project -directory C:/Users/tangx/Desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.tmp/fake_eeprom_v1_0_project c:/Users/tangx/Desktop/fake_eeprom_0x03C10/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/tangx/desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.tmp/fake_eeprom_v1_0_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/tangx/Desktop/fake_eeprom_0x03C10'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/tangx/Desktop/fake_eeprom_0x03C10/rtl/reset_sync.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/tangx/Desktop/fake_eeprom_0x03C10/rtl/fake_eeprom.v:]
+update_compile_order -fileset sources_1
+set_property previous_version_for_upgrade {xilinx.com:user:reset_sync:1.0 xilinx.com:user:fake_eeprom:1.0} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/fake_eeprom_0x03C10
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/tangx/Desktop/fake_eeprom_0x03C10'
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 10 13:42:28 2023...

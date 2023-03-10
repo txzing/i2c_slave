@@ -1,0 +1,39 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Mar 10 15:34:00 2023
+# Process ID: 11588
+# Current directory: C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16060 C:\Users\tangx\Desktop\Test_3EG\fake_eeprom_0x08B40\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project/vivado.log
+# Journal file: C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project/managed_ip_project.xpr
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x08B40_v1_0_project -directory C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project/managed_ip_project.tmp/fake_eeprom_0x08B40_v1_0_project c:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/component.xml
+update_compile_order -fileset sources_1
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40
+update_ip_catalog -rebuild
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x08B40_v1_0_project -directory C:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/managed_ip_project/managed_ip_project.tmp/fake_eeprom_0x08B40_v1_0_project c:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/Test_3EG/fake_eeprom_0x08B40

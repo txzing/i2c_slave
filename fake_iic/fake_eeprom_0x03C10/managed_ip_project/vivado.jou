@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Fri Mar 10 13:38:38 2023
+# Process ID: 28616
+# Current directory: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent28404 C:\Users\tangx\Desktop\fake_eeprom_0x03c10\managed_ip_project\managed_ip_project.xpr
+# Log file: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project/vivado.log
+# Journal file: C:/Users/tangx/Desktop/fake_eeprom_0x03C10/managed_ip_project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tangx/Desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.xpr
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  C:/Users/tangx/Desktop/fake_eeprom_0x03C10 [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_v1_0_project -directory C:/Users/tangx/Desktop/fake_eeprom_0x03c10/managed_ip_project/managed_ip_project.tmp/fake_eeprom_v1_0_project c:/Users/tangx/Desktop/fake_eeprom_0x03C10/component.xml
+update_compile_order -fileset sources_1
+set_property previous_version_for_upgrade {xilinx.com:user:reset_sync:1.0 xilinx.com:user:fake_eeprom:1.0} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/fake_eeprom_0x03C10
