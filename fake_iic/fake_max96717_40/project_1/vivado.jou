@@ -1,0 +1,99 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Mar 29 17:29:13 2023
+# Process ID: 12616
+# Current directory: C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5216 C:\Users\tangx\Desktop\ip\fake_iic\fake_max96717_40\project_1\project_1.xpr
+# Log file: C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/vivado.log
+# Journal file: C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/rtl/fake_max96717_40.v -to_files C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/rtl/fake_max96717F_40.v -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40 [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name fake_max96717_40_v1_0_project -directory C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/project_1.tmp/fake_max96717_40_v1_0_project c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipgui::add_param -name {I2C_SLAVE_ADDR} -component [ipx::current_core] -display_name {I2c Slave Addr(7bit device addr)} -show_label {true} -show_range {true} -widget {}
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+ipgui::add_param -name {I2C_SLAVE_REG_MODE} -component [ipx::current_core] -display_name {I2c Slave Reg Mode(0--1 byte reg addr,1--2 byte reg addr)} -show_label {true} -show_range {true} -widget {comboBox}
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+ipgui::add_param -name {I2C_SLAVE_DAT_MODE} -component [ipx::current_core] -display_name {I2c Slave Dat Mode(0--1 byte data,1--2 byte data)} -show_label {true} -show_range {true} -widget {comboBox}
+ipgui::add_param -name {REG_DEVICE_ADDR} -component [ipx::current_core] -display_name {Reg Device Addr} -show_label {true} -show_range {true} -widget {}
+set_property value 0 [ipx::get_user_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+ipgui::add_param -name {SDA_T_POLARITY} -component [ipx::current_core] -display_name {Sda T Polarity(High level or low level as output)} -show_label {true} -show_range {true} -widget {comboBox}
+set_property value 0 [ipx::get_user_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+ipgui::add_param -name {DEVICE_ADDR_BIT} -component [ipx::current_core] -display_name {Device Addr Bitt(Whether the device address is stored in the upper 7 bits or the lower 7 bits,1 is upper 7 bits)} -show_label {true} -show_range {true} -widget {comboBox}
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40
+ipx::edit_ip_in_project -upgrade true -name fake_max96717_40_v1_1_project -directory C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/project_1.tmp/fake_max96717_40_v1_1_project c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/component.xml
+update_compile_order -fileset sources_1
+ipgui::remove_page -component [ipx::current_core] [ipgui::get_pagespec -name "Page 0" -component [ipx::current_core]]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ]
+set_property widget {radioGroup} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property widget {radioGroup} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "REG_DEVICE_ADDR" -component [ipx::current_core] ]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "REG_DEVICE_ADDR" -component [ipx::current_core] ]
+set_property widget {radioGroup} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ]
+set_property widget {radioGroup} [ipgui::get_guiparamspec -name "DEVICE_ADDR_BIT" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "DEVICE_ADDR_BIT" -component [ipx::current_core] ]
+ipgui::move_param -component [ipx::current_core] -order 7 [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core]] -parent [ipgui::get_canvasspec -component [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 7 [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core]] -parent [ipgui::get_canvasspec -component [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 6 [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core]] -parent [ipgui::get_canvasspec -component [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 4 [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core]] -parent [ipgui::get_canvasspec -component [ipx::current_core]]
+ipgui::move_param -component [ipx::current_core] -order 5 [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core]] -parent [ipgui::get_canvasspec -component [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "DEVICE_ADDR_BIT" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "DEVICE_ADDR_BIT" -component [ipx::current_core] ]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40
+ipx::edit_ip_in_project -upgrade true -name fake_max96717_40_v1_1_project -directory C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/project_1.tmp/fake_max96717_40_v1_1_project c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/component.xml
+update_compile_order -fileset sources_1
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40
+ipx::edit_ip_in_project -upgrade true -name fake_max96717_40_v1_1_project -directory C:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/project_1/project_1.tmp/fake_max96717_40_v1_1_project c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/tangx/Desktop/ip/fake_iic/fake_max96717_40

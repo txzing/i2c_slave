@@ -1,0 +1,10 @@
+
+
+OPTION psf_version = 2.1;
+
+BEGIN driver axis_passthrough_monitor
+	OPTION supported_peripherals = (axis_passthrough_monitor);
+	OPTION copyfiles = all;
+	OPTION VERSION = 1.0;
+	OPTION NAME = axis_passthrough_monitor;
+END DRIVER

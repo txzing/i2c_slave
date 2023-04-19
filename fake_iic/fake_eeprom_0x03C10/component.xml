@@ -3,7 +3,7 @@
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>fake_eeprom_0x03C10</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>sys_rst_n</spirit:name>
@@ -57,14 +57,14 @@
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>fake_eeprom</spirit:modelName>
+        <spirit:modelName>fake_eeprom_0x03C10</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>352a6bb3</spirit:value>
+            <spirit:value>7c80befc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -73,14 +73,14 @@
         <spirit:displayName>Simulation</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>fake_eeprom</spirit:modelName>
+        <spirit:modelName>fake_eeprom_0x03C10</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>352a6bb3</spirit:value>
+            <spirit:value>7c80befc</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -94,7 +94,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>8f6c23ec</spirit:value>
+            <spirit:value>9f9fea93</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -178,6 +178,36 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_eeprom_addr_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_eeprom_addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">6</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -188,7 +218,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>I2C_SLAVE_REG_MODE</spirit:name>
         <spirit:displayName>I2c Slave Reg Mode</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.I2C_SLAVE_REG_MODE">1</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.I2C_SLAVE_REG_MODE" spirit:bitStringLength="1">&quot;1&quot;</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>I2C_SLAVE_DAT_MODE</spirit:name>
@@ -198,7 +228,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>SDA_T_POLARITY</spirit:name>
         <spirit:displayName>Sda T Polarity</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SDA_T_POLARITY">0</spirit:value>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SDA_T_POLARITY" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -222,9 +252,9 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>rtl/fake_eeprom.v</spirit:name>
+        <spirit:name>rtl/fake_eeprom_0x03C10.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_e6da2786</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_664a3b2d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -234,16 +264,16 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>rtl/fake_eeprom.v</spirit:name>
+        <spirit:name>rtl/fake_eeprom_0x03C10.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/fake_eeprom_0x03C10_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/fake_eeprom_0x03C10_v1_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_8f6c23ec</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_9f9fea93</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -262,17 +292,24 @@
     <spirit:parameter>
       <spirit:name>I2C_SLAVE_REG_MODE</spirit:name>
       <spirit:displayName>I2c Slave Reg Mode</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_REG_MODE" spirit:choiceRef="choice_list_8af5a703">1</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_REG_MODE" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">1</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>I2C_SLAVE_DAT_MODE</spirit:name>
       <spirit:displayName>I2c Slave Dat Mode</spirit:displayName>
-      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_DAT_MODE" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_DAT_MODE" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.I2C_SLAVE_DAT_MODE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>SDA_T_POLARITY</spirit:name>
       <spirit:displayName>Sda T Polarity</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SDA_T_POLARITY" spirit:choiceRef="choice_list_8af5a703">0</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SDA_T_POLARITY" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -307,43 +344,13 @@
       </xilinx:taxonomies>
       <xilinx:displayName>fake_eeprom_0x03C10</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
       <xilinx:upgrades>
-        <xilinx:canUpgradeFrom>xilinx.com:user:reset_sync:1.0</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:fake_eeprom:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:fake_eeprom_0x03C10:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2023-03-10T05:42:16Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-04-03T02:32:08Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="nopcore"/>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@24b7191b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6e092b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1beee45c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@79df371e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@528b152b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27fea98a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b3838fb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4924e211_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@71f76a38_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e9bcace_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12530026_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@126c7ebb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@fddf73b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3ecf55_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@74a20d87_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@333ccef_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e7b2a34_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28dde7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59ae1507_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ef2524d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@664a8663_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a09bed_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@502b3eb3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4968c891_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@470cd393_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5831d005_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@380e056e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ecab690_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70ed194b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6270259a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2694b592_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4d2bd17f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
@@ -357,15 +364,84 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@215ec37_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@394431ce_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2d878557_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3402dcea_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3864ee0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a1aa98d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61d2b0fb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c84f9a6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59725598_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b4bb4dc_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a39239f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eea7b52_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a900b87_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5204df3e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e5b5e9a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5101409_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16b697e7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@747a7084_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fb1c360_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bbc89e9_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79748959_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4f96d6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75b50bd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70d94ef4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@507893c7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a43064a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47207afd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16e03770_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40aacbf1_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78ea5936_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eb5bc98_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@793c1643_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2edc7e28_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6722eb11_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14bf13e5_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f4a3ed_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23c71ab3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4886bc86_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ebd5d7d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3762d47b_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59b81bea_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6547bdb8_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ea9be9d_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5de5bbae_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a6b5a9d_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a336b10_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@369dc86b_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a14c27_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40054eb4_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c1e8c50_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31df9eec_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6202335e_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17888b59_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bfc8ec_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ca48ee1_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ede18f_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1830bba1_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf9f46d_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c0b220_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30decd9c_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@783022_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9054ad7_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bcf28cd_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b2985f2_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51adb3a8_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e735900_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22409bf_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52cabf9a_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d69bfbd_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@667b023f_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@412af50a_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b4e97f4_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_eeprom_0x03C10</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a8c4e68c"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="16950c3f"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="cad5913e"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="34d05dee"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ffd62ffa"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="91504c6d"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="e4aec1e2"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="787e6dda"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="47d376c0"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

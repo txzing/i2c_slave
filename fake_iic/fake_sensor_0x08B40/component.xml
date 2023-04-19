@@ -3,7 +3,7 @@
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>user</spirit:library>
   <spirit:name>fake_sensor_0x08B40</spirit:name>
-  <spirit:version>1.0</spirit:version>
+  <spirit:version>1.1</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
       <spirit:name>sys_rst_n</spirit:name>
@@ -69,14 +69,14 @@
         <spirit:displayName>Synthesis</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>i2c_slave</spirit:modelName>
+        <spirit:modelName>fake_sensor_0x08B40</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c9230ca0</spirit:value>
+            <spirit:value>4d26727f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -85,14 +85,14 @@
         <spirit:displayName>Simulation</spirit:displayName>
         <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
         <spirit:language>Verilog</spirit:language>
-        <spirit:modelName>i2c_slave</spirit:modelName>
+        <spirit:modelName>fake_sensor_0x08B40</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>c9230ca0</spirit:value>
+            <spirit:value>4d26727f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -190,6 +190,36 @@
           </spirit:wireTypeDefs>
         </spirit:wire>
       </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_sensor_addr_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_sensor_addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">6</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
     </spirit:ports>
     <spirit:modelParameters>
       <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
@@ -244,9 +274,9 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>rtl/i2c_slave.v</spirit:name>
+        <spirit:name>rtl/fake_sensor_0x08B40.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_bfb7eeb8</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_0a75f506</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -256,14 +286,14 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>rtl/i2c_slave.v</spirit:name>
+        <spirit:name>rtl/fake_sensor_0x08B40.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
       <spirit:name>xilinx_xpgui_1_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>xgui/fake_sensor_0x08B40_v1_0.tcl</spirit:name>
+        <spirit:name>xgui/fake_sensor_0x08B40_v1_1.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:userFileType>CHECKSUM_bd58dade</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
@@ -346,221 +376,109 @@
       </xilinx:taxonomies>
       <xilinx:displayName>fake_sensor_0x08B40</xilinx:displayName>
       <xilinx:definitionSource>package_project</xilinx:definitionSource>
-      <xilinx:coreRevision>2</xilinx:coreRevision>
+      <xilinx:coreRevision>5</xilinx:coreRevision>
       <xilinx:upgrades>
-        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_slave:1.0</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_slave:1.2</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_slave:1.3</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_slave:1.4</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_slave:1.5</xilinx:canUpgradeFrom>
-        <xilinx:canUpgradeFrom>xilinx.com:user:fake_sensor_0x03C10:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:fake_sensor_0x08B40:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2023-03-10T06:36:09Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2023-04-04T02:03:28Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af5981e_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20aa1c22_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@83834c8_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e65af58_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a4ec1ba_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12bd9ce5_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@65013f29_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59c03d12_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eb534ff_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c1eed5c_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b69da2_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@756e37f1_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@144408e0_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@54fe77cc_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@77056f7e_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c4f963d_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cdc3929_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@63ac3722_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@219158ec_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2361b2d1_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e7ad7ca_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75cc16d_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@194dc829_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a3f2122_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27789d1a_ARCHIVE_LOCATION">c:/users/tangx/desktop/test_3eg/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64c551bd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3915b33d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5a148f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd2225f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@447a339a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b92cb4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13de463a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cd5f4a0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b65a9e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@68f8bf8e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@731d0559_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc870f9_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a301e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7008c5c5_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@671ca17c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bb27416_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bfc9bb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b46df4d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@79bfa160_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@166d7b66_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d756e11_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e2833b7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e812633_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ee33bf8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bfa5792_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fae6ab_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fe3ffcb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf58543_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@f648a5d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c2ad664_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@68398de2_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@288ca746_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7863bd95_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39145040_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35ae243_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3958e73e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b899d3f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@a4690af_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d7fc681_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f661cd3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6236571a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5461690b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f98ac5e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5819c89d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ebeaaa0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@341e9a89_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53d576e6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a2bd8f3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec9eadb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3ecef8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f550eda_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dfb5088_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@337c725e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a0c357a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4617e809_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@31dcf53_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e59ecc3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1466622c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5806ce9a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66f336bf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45dc10d5_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d85acd3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e5502d4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@26707d3f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37b29861_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@62236718_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a39a52_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ba26f9_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@325c22bc_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c4fce76_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17c012b0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c112040_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@299cbe66_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@392308b7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@da2b151_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@300b8396_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13901ce6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b444a18_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2705bfcb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d82660a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/test_i2c_ip/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bde620f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@57766da1_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12913de_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d209a88_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b645ef6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d8087a4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@9ff0e79_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a188f54_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c6c030_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40aa92ad_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7afe9639_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@48f83c75_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59fef39_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d32b6ac_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5552d5_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e6f8f34_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_slave</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e943e8a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c3bc1ab_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b647130_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a576afe_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3144921f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@456eb6e6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@541f0e7b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a5b7207_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40037c6a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd889d2_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b4e5712_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@54a486e8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a90b4b7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e427be0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@62fbbb59_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6844406c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17f00223_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@757833bc_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@71bf6bdb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b9ff189_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e2ae34f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@61004fa3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@305225a0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1323b3db_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@765b6e2a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51b881d8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e407c1d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cda7e46_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dc21875_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@449ed92b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cbaa038_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b97046c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e466fee_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7430b0c8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@92113aa_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d22558d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b25f829_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@292963d3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a8071b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36ba6131_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@56333280_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@120a6d88_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b1b69e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d14bd36_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4324fd84_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a30f5d3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ca671f6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@459b4b0d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b8e7a6a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x03C10</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@8094155_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d068f39_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5925595d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21fcd19_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40551be6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3af154de_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@245b8ad3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@412a7de0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@222ddee5_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21114daf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a6dc5a8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@609bfd0a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@307edc13_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@30917485_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d4e9e97_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fc5b6bf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@26a67506_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@364f6357_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d2adb2b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c0b5dfd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@10781fd4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a7a2193_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d77a7a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@38cc661a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e162eaf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e01cff6_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@625f94e9_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@755a167b_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ec7a17a_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@322378dc_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299006da_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dd29f47_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa80ce9_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11d2d0d6_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b0b7881_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e5522f_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28352cca_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5790e7f8_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@291295f_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45cd8c91_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e0638e_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@730b1360_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@290c5a2e_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc36e8a_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fd0d87_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dee2ab5_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7627cb9_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14a2ed1a_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@281f1256_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a40b6f9_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dda4f6d_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@592f2383_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a740dc2_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dd8f63b_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2851456f_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bc289ac_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d45288b_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ffc4a79_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71979c42_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b75ee46_ARCHIVE_LOCATION">d:/workdir/wave3_tx_200W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ac968ec_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@521f7363_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44f8e65a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8156163_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e2b8e82_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1149bd69_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa63539_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@25780cce_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f732b51_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d6f7af3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68359b3e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e9d862c_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f6952ed_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34cc10bf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1447bb39_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@28e2f31a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe929f4_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3efb8445_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d88ba02_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23f8fd0b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a31ae8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f8d34a8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ba295e2_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d5a1209_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41cf92fe_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@609ba78d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63bca885_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a9a4607_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5461061f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58ac4dbb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35d5e390_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5dc87a2b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@210db21b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11a72d22_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14180bd2_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@194d67e3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77426031_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/ip/fake_iic/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3347b2c0_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39dc4304_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@478139be_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34dea281_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b8b9c93_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e32edab_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79121d52_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a52770_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64fa7237_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1502966e_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b6acd71_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@16fee8b7_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74724c90_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52df6547_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75001ffd_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a5a91ae_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36b0fcda_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6257406d_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63b4dde9_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17685321_ARCHIVE_LOCATION">d:/workdir/wave3_tx_800W/vivado/ip_repo/ip/fake_sensor_0x08B40</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a13618b4"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="bef20680"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="cad5913e"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="b0e6edfe"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="582b33c8"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="067a546d"/>
       <xilinx:checksum xilinx:scope="parameters" xilinx:value="43fe0cbd"/>
     </xilinx:packagingInfo>

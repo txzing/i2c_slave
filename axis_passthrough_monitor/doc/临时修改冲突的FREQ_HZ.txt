@@ -1,0 +1,86 @@
+get_property CONFIG.FREQ_HZ.VALUE_SRC [get_bd_pins axis_passthrough_mon_0/aclk]
+CONSTANT
+set_property CONFIG.FREQ_HZ.VALUE_SRC PROPAGATED [get_bd_pins axis_passthrough_mon_0/aclk]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+set all_busif [get_bd_intf_pins axis_passthrough_mon_0/*]
+put $all_busif
+/axis_passthrough_mon_0/S00_AXI /axis_passthrough_mon_0/m_axis /axis_passthrough_mon_0/s_axis
+
+
+foreach busif $all_busif {
+	put	[get_property CONFIG.PROTOCOL $busif]
+}
+
+
+set ttt {/axis_passthrough_mon_0/m_axis /axis_passthrough_mon_0/s_axis}
+foreach ttt_t $ttt {
+	put	$ttt_t
+}
+set ttt [list /axis_passthrough_mon_0/m_axis /axis_passthrough_mon_0/s_axis]
+foreach ttt_t $ttt {
+	put	$ttt_t
+}
+
+
+set freq_hz [get_property config.FREQ_HZ [get_bd_intf_pins axis_passthrough_mon_0/s_axis]]
+set_property config.FREQ_HZ $freq_hz [get_bd_cells axis_passthrough_mon_0]
+
+
+find_bd_objs -relation connected_to [get_bd_intf_pins axis_passthrough_mon_0/s_axis]
+get_property config.FREQ_HZ [find_bd_objs -relation connected_to [get_bd_intf_pins axis_passthrough_mon_0/s_axis]]
+set_property config.FREQ_HZ [get_property config.FREQ_HZ [find_bd_objs -relation connected_to [get_bd_intf_pins axis_passthrough_mon_0/s_axis]]] [get_bd_cells axis_passthrough_mon_0]
+
+
+
+get_property MODE [get_bd_intf_pins axis_passthrough_mon_0/s_axis]
+
+get_property CONFIG.PROTOCOL [get_bd_intf_pins axis_passthrough_mon_0/S00_AXI]
+
+
+
+--------------------------------------------------------------------------------------
+set freq_hz [get_property config.FREQ_HZ [get_bd_intf_pins $cellpath/S00_AXI]]
+set_property config.C_S00_AXI_FREQ_HZ $freq_hz [get_bd_cells $cellpath]
+
+
+proc propagate { cellpath otherInfo} {
+   set cell_handle [get_bd_cells $cellpath]     
+   set_property config.PARAM1 [get_property config.PARAM2 [find_bd_objs –relation connected_to [get_bd_intf_pins $cell_handle/Interface1]]] $cell_handle
+}
+
+
+
+
+
+
+
+
+set cellpath axis_passthrough_mon_0
+set cell_handle [get_bd_cells $cellpath]  
+set busif [get_bd_intf_pins $cellpath/s_axis]
+	
+set_property CONFIG.FREQ_HZ.VALUE_SRC PROPAGATED [get_bd_pins $cell_handle/aclk]
+#find_bd_objs –relation connected_to [get_bd_intf_pins $cell_handle/s_axis]
+get_property config.FREQ_HZ [get_bd_intf_pins $cell_handle/s_axis]
+set_property config.FREQ_HZ [get_property config.FREQ_HZ [get_bd_intf_pins $cell_handle/s_axis]] $cell_handle
+put [get_property config.FREQ_HZ [get_bd_intf_pins $cell_handle/s_axis]]
+get_property config.FREQ_HZ $cell_handle
+
+
+
+
+
+	
