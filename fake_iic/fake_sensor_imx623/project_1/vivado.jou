@@ -1,0 +1,110 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Thu May 18 13:19:53 2023
+# Process ID: 8780
+# Current directory: D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent29860 D:\workdir\TEST_2CG\tx\desay_imx623\vivado\ip_repo\ip\fake_sensor_imx623\project_1\project_1.xpr
+# Log file: D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/vivado.log
+# Journal file: D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+update_files -from_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -to_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_0x03C10.v -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+update_ip_catalog -rebuild
+set_property  ip_repo_paths  {d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_0x03C10 D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623 [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name fake_sensor_0x03C10_v1_1_project -directory D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/project_1.tmp/fake_sensor_0x03C10_v1_1_project d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -copy_to d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/src D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fake_sensor_imx623 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::remove_file src/fake_sensor_imx623.v [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+ipx::remove_file src/fake_sensor_imx623.v [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+ipx::add_file D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+set_property type verilogSource [ipx::get_files rtl/fake_sensor_imx623.v -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files rtl/fake_sensor_imx623.v -of_objects [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]]
+ipx::add_file D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+set_property type verilogSource [ipx::get_files rtl/fake_sensor_imx623.v -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+set_property library_name xil_defaultlib [ipx::get_files rtl/fake_sensor_imx623.v -of_objects [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property previous_version_for_upgrade {xilinx.com:user:fake_sensor_0x03C10:1.0 xilinx.com:user:fake_sensor_0x03C10:1.1} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623
+ipx::edit_ip_in_project -upgrade true -name fake_sensor_imx623_v1_1_project -directory D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/project_1.tmp/fake_sensor_imx623_v1_1_project d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/component.xml
+update_compile_order -fileset sources_1
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "DEVICE_ADDR_BIT" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters DEVICE_ADDR_BIT -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "REG_DEVICE_ADDR" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623
+ipx::edit_ip_in_project -upgrade true -name fake_sensor_imx623_v1_2_project -directory D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/project_1.tmp/fake_sensor_imx623_v1_2_project d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/component.xml
+update_compile_order -fileset sources_1
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623
+ipx::edit_ip_in_project -upgrade true -name fake_sensor_imx623_v1_2_project -directory D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/project_1/project_1.tmp/fake_sensor_imx623_v1_2_project d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/component.xml
+update_compile_order -fileset sources_1
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1

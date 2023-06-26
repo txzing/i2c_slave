@@ -1,0 +1,696 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Jun 26 09:43:12 2023
+# Process ID: 14004
+# Current directory: C:/Users/txzing/Desktop/Reset_Delay/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19008 C:\Users\txzing\Desktop\Reset_Delay\project_1\project_1.xpr
+# Log file: C:/Users/txzing/Desktop/Reset_Delay/project_1/vivado.log
+# Journal file: C:/Users/txzing/Desktop/Reset_Delay/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/Reset_Delay/project_1/project_1.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'C:/Users/txzing/Desktop/Reset_Delay/project_1/project_1.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir c:/users/txzing/desktop -vendor xilinx.com -library user -taxonomy /UserIP
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'vivado/bd/system.tcl' found in file group 'Synthesis'.
+Resolution: Remove the file from the specified file group.
+WARNING: [IP_Flow 19-991] Unrecognized or unsupported file 'vivado/bd/system.tcl' found in file group 'Simulation'.
+Resolution: Remove the file from the specified file group.
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+ipx::remove_file vivado/bd/system.tcl [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+ipx::remove_file vivado/bd/system.tcl [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+ipx::add_file_group -type example {} [ipx::current_core]
+ipx::remove_file_group xilinx_examples [ipx::current_core]
+ipx::add_file_group -type examples_script {} [ipx::current_core]
+ERROR: [IP_Flow 19-841] Invalid file group type 'Block Diagram', for valid types run ipx::report_possible_file_groups
+ERROR: [Common 17-39] 'set_property' failed due to earlier errors.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::add_file C:/Users/txzing/Desktop/vivado/bd/system.tcl [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]
+set_property type tclSource [ipx::get_files vivado/bd/system.tcl -of_objects [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "FREQ_HZ" -component [ipx::current_core] ]
+set_property value 100000000 [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value 100000000 [ipx::get_hdl_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property enablement_value false [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_hdl_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_bit_string_length 0 [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "FREQ_HZ" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "RST_MS_MAX" -component [ipx::current_core] ]
+set_property value 20 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value 20 [ipx::get_hdl_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_hdl_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_bit_string_length 0 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_type range_long [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 1 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 1000 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  c:/users/txzing/desktop [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'alinx.com:user:ADC_PORT:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT.xml
+File ignored: c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'alinx.com:user:ADC_PORT_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT_rtl.xml
+File ignored: c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/30_touch_draw_lcd/repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/30_touch_draw_lcd/repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'digilentinc.com:interface:tmds:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds.xml
+File ignored: c:/users/txzing/desktop/vivado/ip_repo/if/tmds_v1_0/tmds.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'digilentinc.com:interface:tmds_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds_rtl.xml
+File ignored: c:/users/txzing/desktop/vivado/ip_repo/if/tmds_v1_0/tmds_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'digilentinc.com:interface:tmds:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds.xml
+File ignored: c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/tmds_v1_0/tmds.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'digilentinc.com:interface:tmds_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds_rtl.xml
+File ignored: c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/tmds_v1_0/tmds_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'digilentinc.com:interface:tmds:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds.xml
+File ignored: c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/tmds_v1_0/tmds.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'digilentinc.com:interface:tmds_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/if/tmds_v1_0/tmds_rtl.xml
+File ignored: c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/tmds_v1_0/tmds_rtl.xml
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/users/txzing/desktop'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:Reset_Delay:1.0'. The one found in IP location 'c:/users/txzing/desktop' will take precedence over the same IP in location c:/users/txzing/desktop/Reset_Delay
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:key_debounce:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/2_Microblaze_35T/8_axi4_ddr_rw/axi4_ddr_rw.srcs/sources_1/bd/mref/key_debounce' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/20_axi4_ddr_rw/axi4_ddr_rw.runs/synth_1/.srcs/sources_1/bd/mref/key_debounce
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/20_axi4_ddr_rw/axi4_ddr_rw.srcs/sources_1/bd/mref/key_debounce
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'www.alientek.com:user:rgb2lcd:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'openedv.com:user:DVI_Transmitter:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/DVI_TX/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ax_pwm:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/12_custom_pwm_ip/vivado/ip_repo/ax_pwm_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/29_lcd7_touch/vivado/repo/alinx/ax_pwm_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:pl_bram_ctrl:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/16_bram_test/vivado/ip_repo/ip/pl_bram_ctrl_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/17_dma_loopback/vivado/ip_repo/ip/pl_bram_ctrl_1.0
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/pl_bram_ctrl_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad9708_send:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/18_ad9708_dma/vivado/ip_repo/ad9708_send_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9708_sg_dma/vivado/ip_repo/ad9708_send_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad9280_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/19_ad9280_dma_dp/vivado/ip_repo/ad9280_sample' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9280_sg_dma_dp/vivado/ip_repo/ad9280_sample
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com:user:ad9238_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/20_ad9238_dma_dp/vivado/repo/ad9238_sample_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9238_sg_dma_dp/vivado/repo/ad9238_sample_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad7606_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com.cn:user:i2c_extender:1.1'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/24_an5642_double/vivado/repo/alinx/i2c_extender' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/25_an5642_sd/vivado/repo/alinx/i2c_extender
+   c:/users/txzing/desktop/example/course_s2/26_an5642_lwip_double/vivado/repo/alinx/i2c_extender
+   c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_i2c_extender
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_i2c_extender
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'www.alinx.com.cn:user:alinx_ov5640:5.4'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/24_an5642_double/vivado/repo/alinx/ov5640_ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/25_an5642_sd/vivado/repo/alinx/ov5640_ip
+   c:/users/txzing/desktop/example/course_s2/26_an5642_lwip_double/vivado/repo/alinx/ov5640_ip
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_ov5640
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_ov5640
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:axi_dynclk:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/29_lcd7_touch/vivado/repo/ip/axi_dynclk_v1_0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/30_touch_draw_lcd/repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_axi_dynclk_v1_0
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_axi_dynclk_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:axi4_ddr_read:2.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/axi4_ddr_read_2.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/axi4_ddr_read_2.0
+   c:/users/txzing/desktop/vivado/ip_repo/ip/axi4_ddr_read_2.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:AXI4_Stream_Terminator:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/AXI4_Stream_Terminator' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/AXI4_Stream_Terminator
+   c:/users/txzing/desktop/vivado/ip_repo/ip/AXI4_Stream_Terminator
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:AXI_LITE_REG:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/AXI_LITE_REG_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/AXI_LITE_REG_1.0
+   c:/users/txzing/desktop/vivado/ip_repo/ip/AXI_LITE_REG_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:colorbar_gen:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/colorbar_gen' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/colorbar_gen
+   c:/users/txzing/desktop/vivado/ip_repo/ip/colorbar_gen
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:delay_tick:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/delay_tick' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/delay_tick
+   c:/users/txzing/desktop/vivado/ip_repo/ip/delay_tick
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Detect_level:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/Detect_level' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/Detect_level
+   c:/users/txzing/desktop/vivado/ip_repo/ip/Detect_level
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:frame_fifo_read:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/frame_fifo_read' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/frame_fifo_read
+   c:/users/txzing/desktop/vivado/ip_repo/ip/frame_fifo_read
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:frame_read:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/frame_read' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/frame_read
+   c:/users/txzing/desktop/vivado/ip_repo/ip/frame_read
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'openedv.com:user:hdmi_colorbar_top:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/HDMI_COLORBAR_TOP/ip
+   c:/users/txzing/desktop/vivado/ip_repo/ip/HDMI_COLORBAR_TOP/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:hdmi_trans:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/hdmi_trans' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/hdmi_trans
+   c:/users/txzing/desktop/vivado/ip_repo/ip/hdmi_trans
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com.cn:user:i2c_hub:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_hub' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_hub
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_hub
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:I2C_SLAVE:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_slave' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_slave
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_slave
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:icontrol:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/icontrol' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/icontrol
+   c:/users/txzing/desktop/vivado/ip_repo/ip/icontrol
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:led_blink:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/led_blink' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/led_blink
+   c:/users/txzing/desktop/vivado/ip_repo/ip/led_blink
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:lvds4x2_1to7_sdr:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/lvds4x2_1to7_sdr' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/lvds4x2_1to7_sdr
+   c:/users/txzing/desktop/vivado/ip_repo/ip/lvds4x2_1to7_sdr
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:multiplexer:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/multiplexer' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/multiplexer
+   c:/users/txzing/desktop/vivado/ip_repo/ip/multiplexer
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:raw_colorbar_gen:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/raw_colorbar_gen' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/raw_colorbar_gen
+   c:/users/txzing/desktop/vivado/ip_repo/ip/raw_colorbar_gen
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Reset_Delay:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/Reset_Delay' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/Reset_Delay
+   c:/users/txzing/desktop/vivado/ip_repo/ip/Reset_Delay
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:reset_module:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/reset_module' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/reset_module
+   c:/users/txzing/desktop/vivado/ip_repo/ip/reset_module
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:res_detector:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/res_detector' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/res_detector
+   c:/users/txzing/desktop/vivado/ip_repo/ip/res_detector
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:rgb2bayer:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/rgb2bayer' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/rgb2bayer
+   c:/users/txzing/desktop/vivado/ip_repo/ip/rgb2bayer
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:rgb2dvi:1.2'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/rgb2dvi_v1_2' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/rgb2dvi_v1_2
+   c:/users/txzing/desktop/vivado/ip_repo/ip/rgb2dvi_v1_2
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:rx_mmcm_adv:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/rx_mmcm_adv' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/rx_mmcm_adv
+   c:/users/txzing/desktop/vivado/ip_repo/ip/rx_mmcm_adv
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:timing_gen:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/timing_gen' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/timing_gen
+   c:/users/txzing/desktop/vivado/ip_repo/ip/timing_gen
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:uihdmitx:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/uihdmitx_v1_0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/uihdmitx_v1_0
+   c:/users/txzing/desktop/vivado/ip_repo/ip/uihdmitx_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:video_driver:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/video_driver' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/video_driver
+   c:/users/txzing/desktop/vivado/ip_repo/ip/video_driver
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:video_rect_read_data:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/video_rect_read_data' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/video_rect_read_data
+   c:/users/txzing/desktop/vivado/ip_repo/ip/video_rect_read_data
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com.cn:user:xgpio_to_i2c:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/xgpio_to_i2c' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/xgpio_to_i2c
+   c:/users/txzing/desktop/vivado/ip_repo/ip/xgpio_to_i2c
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:pl_bram_rd:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/14_ps_pl_bram/ip_repo/pl_bram_rd_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/18_ps_pl_bram/ip_repo/pl_bram_rd_1.0
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/18_ps_pl_bram/managed_ip_project/ip_repo/pl_bram_rd_1.0
+   c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/pl_bram_rd_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alientek.com:user:rgb2lcd:1.4'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/rgb2lcd/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/rgb2lcd/ip/rgb2lcd
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/30_touch_draw_lcd/repo/rgb2lcd/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/rgb2lcd/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alientek.com:user:ov7725_capture_data:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/ov7725_cap_data' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/ov7725_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/ov7725_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/ov7725_cap_data
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'opnendv.com:user:Video_Image_Processor:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/binarization' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/binarization
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/binarization
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:video_image_process:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/median' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/median
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/median
+   c:/users/txzing/desktop/GG/bmp_sim_test/vivado_test/VIP/martix_ram
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alientek.com:user:ov5640_capture_data:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/ov5640_cap_data' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/ov5640_cap_data
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/ov5640_cap_data
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'opnendv.com:user:rgb2ycbcr:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/rgb2ycbcr' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/rgb2ycbcr
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/rgb2ycbcr
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:breath_led_ip:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/ZYNQ_7020_SDK/6_custom_ip/ip_repo/breath_led_ip_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/2_Microblaze_35T/7_custom_ip/ip_repo/breath_led_ip_1.0
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/17_dual_core_amp/ip_repo/breath_led_ip_1.0
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/6_custom_ip/ip_repo/breath_led_ip_1.0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/13_dual_core_amp/ip_repo/breath_led_ip_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:lvds4x1_1to7:1.0'. The one found in IP location 'c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/lvds4x1_1to7' will take precedence over the same IP in location c:/users/txzing/desktop/vivado/ip_repo/ip/lvds4x1_1to7
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:lvds4x2_1to7:1.0'. The one found in IP location 'c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/lvds4x2_1to7' will take precedence over the same IP in location c:/users/txzing/desktop/vivado/ip_repo/ip/lvds4x2_1to7
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:lvds4x2_mapping:1.0'. The one found in IP location 'c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/lvds4x2_mapping' will take precedence over the same IP in location c:/users/txzing/desktop/vivado/ip_repo/ip/lvds4x2_mapping
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:vid_4to1_multiplexer:1.0'. The one found in IP location 'c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/vid_4to1_multiplexer' will take precedence over the same IP in location c:/users/txzing/desktop/vivado/ip_repo/ip/vid_4to1_multiplexer
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:axis_passthrough_monitor:1.0'. The one found in IP location 'c:/users/txzing/desktop/vivado/ip_repo/ip/axis_passthrough_monitor' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/axis_passthrough_monitor
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/axis_passthrough_monitor
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:contrastadj:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/contrastadj/contrastadj/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/contrastadj/contrastadj/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:detectCorner:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/detectCorner/detectCorner/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/detectCorner/detectCorner/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:dilation:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/dilation/dilation/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/dilation/dilation/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:edge_canny_detector:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/edge_canny_detector/edge_canny_detector/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/edge_canny_detector/edge_canny_detector/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:edge_detector:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/edge_detector/edge_detector/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/edge_detector/edge_detector/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:erosion:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/erosion/erosion/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/erosion/erosion/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:overlaystream:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/overlaystream/overlaystream/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/overlaystream/overlaystream/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:rgb2gray:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/rgb2gray/rgb2gray/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/rgb2gray/rgb2gray/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:rgb2ycrcb:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/hls/rgb2ycrcb/rgb2ycrcb/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/hls/rgb2ycrcb/rgb2ycrcb/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:led_control:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/01_led_control/hls/led_control/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/vivado/01_led_control/hls/led_control/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:led_register:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/02_led_register/hls/led_register/solution1/impl/ip' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/vivado/02_led_register/hls/led_register/solution1/impl/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:threshold_get:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/04_rgb2gray/rgb2gray.srcs/sources_1/bd/mref/threshold_get' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/05_rgb2ycrcb/rgb2ycrcb.srcs/sources_1/bd/mref/threshold_get
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/09_contrast_adj/contrast_adj.srcs/sources_1/bd/mref/threshold_get
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/12_edge_detector/edge_detector.srcs/sources_1/bd/mref/threshold_get
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:mem2stream:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/hls/xilinx_com_hls_mem2stream_1_0' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/hls/xilinx_com_hls_mem2stream_1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:stream2mem:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/hls/xilinx_com_hls_stream2mem_1_0' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/hls/xilinx_com_hls_stream2mem_1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:rgb2dvi:1.3'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/rgb2dvi_v1_3' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/rgb2dvi_v1_3
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad_9238_control:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/ip_repo' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/vivado/ip_repo
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:ad_9238_control:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/ip_repo/ad_9238_control/ad_9238_control.srcs/sources_1/bd/mref/ad_9238_control' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/vivado/ip_repo/ad_9238_control/ad_9238_control.srcs/sources_1/bd/mref/ad_9238_control
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:cpu_reg_v1_0:1.0'. The one found in IP location 'c:/users/txzing/desktop/基本资料/course_s6/vivado/ip_repo/cpu_register/cpu_reg_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/基本资料/course_s6_hls_2cg_b/vivado/ip_repo/cpu_register/cpu_reg_1.0
+update_ip_catalog: Time (s): cpu = 00:00:10 ; elapsed = 00:04:34 . Memory (MB): peak = 1166.562 ; gain = 0.000
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/users/txzing/desktop
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'alinx.com:user:ADC_PORT:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT.xml
+File ignored: c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'alinx.com:user:ADC_PORT_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT_rtl.xml
+File ignored: c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0/ADC_PORT_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'openedv.com:user:TMDS:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'openedv.com:user:TMDS_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/22_DVI_TX/if/TMDS_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/if/TMDS_rtl.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Definition IP file 'xilinx.com:user:lcd:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd.xml
+WARNING: [IP_Flow 19-1694] Ignoring duplicate Bus Abstraction IP file 'xilinx.com:user:lcd_rtl:1.0' found within IP repository 'c:/users/txzing/desktop'.
+File in use: c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+File ignored: c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/rgb2lcd/if/lcd/lcd_rtl.xml
+INFO: [Common 17-14] Message 'IP_Flow 19-1694' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/users/txzing/desktop'
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:Reset_Delay:1.0'. The one found in IP location 'c:/users/txzing/desktop' will take precedence over the same IP in location c:/users/txzing/desktop/Reset_Delay
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:module_ref:key_debounce:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/2_Microblaze_35T/8_axi4_ddr_rw/axi4_ddr_rw.srcs/sources_1/bd/mref/key_debounce' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/20_axi4_ddr_rw/axi4_ddr_rw.runs/synth_1/.srcs/sources_1/bd/mref/key_debounce
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/20_axi4_ddr_rw/axi4_ddr_rw.srcs/sources_1/bd/mref/key_debounce
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'www.alientek.com:user:rgb2lcd:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/23_vdma_lcd/ip_repo/rgb2lcd/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/24_sd_bmp_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/27_ov5640_lcd/ip_repo/rgb2lcd/ip
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/31_dual_ov5640_lcd/ip_repo/rgb2lcd/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'openedv.com:user:DVI_Transmitter:1.0'. The one found in IP location 'c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/25_sd_bmp_hdmi/ip_repo/DVI_TX/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/1_FPGA_Design/MPSoC_XCZU2EG_Vitis/XCZU2EG/28_ov5640_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/17_DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/DVI_TX/ip
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/DVI_TX/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ax_pwm:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/12_custom_pwm_ip/vivado/ip_repo/ax_pwm_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/29_lcd7_touch/vivado/repo/alinx/ax_pwm_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:pl_bram_ctrl:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/16_bram_test/vivado/ip_repo/ip/pl_bram_ctrl_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/17_dma_loopback/vivado/ip_repo/ip/pl_bram_ctrl_1.0
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/pl_bram_ctrl_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad9708_send:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/18_ad9708_dma/vivado/ip_repo/ad9708_send_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9708_sg_dma/vivado/ip_repo/ad9708_send_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad9280_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/19_ad9280_dma_dp/vivado/ip_repo/ad9280_sample' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9280_sg_dma_dp/vivado/ip_repo/ad9280_sample
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com:user:ad9238_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/20_ad9238_dma_dp/vivado/repo/ad9238_sample_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad9238_sg_dma_dp/vivado/repo/ad9238_sample_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:ad7606_sample:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/21_ad7606_dma_dp/vivado/ip_repo/ad7606_sample_1.0' will take precedence over the same IP in location c:/users/txzing/desktop/example/course_s2/22_ad7606_sg_dma_dp/vivado/ip_repo/ad7606_sample_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com.cn:user:i2c_extender:1.1'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/24_an5642_double/vivado/repo/alinx/i2c_extender' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/25_an5642_sd/vivado/repo/alinx/i2c_extender
+   c:/users/txzing/desktop/example/course_s2/26_an5642_lwip_double/vivado/repo/alinx/i2c_extender
+   c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_extender
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_i2c_extender
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_i2c_extender
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'www.alinx.com.cn:user:alinx_ov5640:5.4'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/24_an5642_double/vivado/repo/alinx/ov5640_ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/course_s2/25_an5642_sd/vivado/repo/alinx/ov5640_ip
+   c:/users/txzing/desktop/example/course_s2/26_an5642_lwip_double/vivado/repo/alinx/ov5640_ip
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_ov5640
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_ov5640
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'digilentinc.com:ip:axi_dynclk:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/course_s2/29_lcd7_touch/vivado/repo/ip/axi_dynclk_v1_0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/18_vdma_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/19_sd_bmp_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/20_sd_bmp_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/21_ov7725_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/22_ov7725_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/23_ov5640_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/24_ov5640_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/25_ov5640_gray_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/26_ov5640_binarization_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/27_ov5640_median_filter/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/28_ov7725_hdmi_sobel/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/29_ov7725_camera/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/30_touch_draw_lcd/repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/31_dual_ov5640_lcd/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/example/ZYNQ_7020_SDK/32_dual_ov5640_hdmi/ip_repo/axi_dynclk_v1_0
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/08_video_on_video/ip/normal/ip_axi_dynclk_v1_0
+   c:/users/txzing/desktop/基本资料/course_s6/vivado/10_detectCorner/ip/normal/ip_axi_dynclk_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:axi4_ddr_read:2.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/axi4_ddr_read_2.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/axi4_ddr_read_2.0
+   c:/users/txzing/desktop/vivado/ip_repo/ip/axi4_ddr_read_2.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:hls:AXI4_Stream_Terminator:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/AXI4_Stream_Terminator' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/AXI4_Stream_Terminator
+   c:/users/txzing/desktop/vivado/ip_repo/ip/AXI4_Stream_Terminator
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:AXI_LITE_REG:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/AXI_LITE_REG_1.0' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/AXI_LITE_REG_1.0
+   c:/users/txzing/desktop/vivado/ip_repo/ip/AXI_LITE_REG_1.0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:colorbar_gen:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/colorbar_gen' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/colorbar_gen
+   c:/users/txzing/desktop/vivado/ip_repo/ip/colorbar_gen
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:delay_tick:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/delay_tick' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/delay_tick
+   c:/users/txzing/desktop/vivado/ip_repo/ip/delay_tick
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:Detect_level:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/Detect_level' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/Detect_level
+   c:/users/txzing/desktop/vivado/ip_repo/ip/Detect_level
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:frame_fifo_read:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/frame_fifo_read' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/frame_fifo_read
+   c:/users/txzing/desktop/vivado/ip_repo/ip/frame_fifo_read
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:frame_read:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/frame_read' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/frame_read
+   c:/users/txzing/desktop/vivado/ip_repo/ip/frame_read
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'openedv.com:user:hdmi_colorbar_top:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/HDMI_COLORBAR_TOP/ip' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/HDMI_COLORBAR_TOP/ip
+   c:/users/txzing/desktop/vivado/ip_repo/ip/HDMI_COLORBAR_TOP/ip
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:user:hdmi_trans:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/hdmi_trans' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/hdmi_trans
+   c:/users/txzing/desktop/vivado/ip_repo/ip/hdmi_trans
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'alinx.com.cn:user:i2c_hub:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_hub' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_hub
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_hub
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:I2C_SLAVE:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/i2c_slave' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/i2c_slave
+   c:/users/txzing/desktop/vivado/ip_repo/ip/i2c_slave
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:icontrol:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/icontrol' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/icontrol
+   c:/users/txzing/desktop/vivado/ip_repo/ip/icontrol
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:led_blink:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/led_blink' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/led_blink
+   c:/users/txzing/desktop/vivado/ip_repo/ip/led_blink
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'user.org:user:lvds4x2_1to7_sdr:1.0'. The one found in IP location 'c:/users/txzing/desktop/example/system_wrapper_7020/Vivado/ip_repo/ip/lvds4x2_1to7_sdr' will take precedence over the same IP in locations: 
+   c:/users/txzing/desktop/micro_7020/system_wrapper/ip_repo/ip/lvds4x2_1to7_sdr
+   c:/users/txzing/desktop/vivado/ip_repo/ip/lvds4x2_1to7_sdr
+INFO: [Common 17-14] Message 'IP_Flow 19-1663' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+update_ip_catalog: Time (s): cpu = 00:00:16 ; elapsed = 00:02:32 . Memory (MB): peak = 1166.562 ; gain = 0.000
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 26 09:58:29 2023...

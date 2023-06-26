@@ -1,0 +1,113 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May 23 10:56:00 2023
+# Process ID: 30524
+# Current directory: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17804 C:\Users\txzing\Desktop\fake_eeprom_ar0233\project_1\project_1.xpr
+# Log file: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/vivado.log
+# Journal file: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/tangx/Desktop/fake_eeprom_0x03C10/project_1' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v', nor could it be found using path 'C:/Users/tangx/Desktop/fake_eeprom_0x03C10/rtl/fake_eeprom_0x03C10.v'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'C:/Users/txzing/Desktop/fake_eeprom_0x03C10', nor could it be found using path 'C:/Users/tangx/Desktop/fake_eeprom_0x03C10'.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.srcs/sources_1', nor could it be found using path 'C:/Users/tangx/Desktop/fake_eeprom_0x03C10/project_1/project_1.srcs/sources_1'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_0x03C10'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1111.023 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_files -from_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -to_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' with file 'D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v'.
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v -to_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v' with file 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v'.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+[Tue May 23 10:57:23 2023] Launched synth_1...
+Run output will be captured here: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.runs/synth_1/runme.log
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/txzing/Desktop/fake_eeprom_ar0233 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1'.)
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/txzing/desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03c10_v1_1_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/reset_sync.v:]
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' does not exist. The file is ignored.
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v
+update_compile_order -fileset sources_1
+set_property top fake_eeprom_ar0233 [current_fileset]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml' ignored by IP packager.
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'I2C_SLAVE_REG_MODE' is inferred to be bitString format.
+INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'I2C_SLAVE_DAT_MODE' is inferred to be bitString format.
+INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'SDA_T_POLARITY' is inferred to be bitString format.
+ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property layout {horizontal} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/txzing/desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03c10_v1_1_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/reset_sync.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [c:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v:]
+update_compile_order -fileset sources_1
+set_property previous_version_for_upgrade {xilinx.com:user:fake_eeprom_0x03C10:1.0 xilinx.com:user:fake_eeprom_0x03C10:1.1} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'

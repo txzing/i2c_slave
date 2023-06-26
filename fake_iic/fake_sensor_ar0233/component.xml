@@ -1,0 +1,450 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>user</spirit:library>
+  <spirit:name>fake_sensor_ar0233</spirit:name>
+  <spirit:version>1.3</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>sys_rst_n</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_rst_n</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_RST_N.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>sys_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>sys_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_BUSIF"/>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.FREQ_HZ"/>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_ASYNC_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_ASYNC_RESET">sys_rst_n</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.SYS_CLK.ASSOCIATED_RESET">sys_rst_n</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>fake_sensor_ar0233</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c67d67cb</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>fake_sensor_ar0233</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>c67d67cb</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui_1</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_1_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>bd58dade</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>sys_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sys_rst_n</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>scl</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sda_in</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sda_t</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>sda_o</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>reg</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_sensor_addr_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>fake_sensor_addr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">6</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>I2C_SLAVE_ADDR</spirit:name>
+        <spirit:displayName>I2c Slave Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.I2C_SLAVE_ADDR" spirit:bitStringLength="7">&quot;0010000&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>I2C_SLAVE_REG_MODE</spirit:name>
+        <spirit:displayName>I2c Slave Reg Mode</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.I2C_SLAVE_REG_MODE" spirit:bitStringLength="1">&quot;1&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>I2C_SLAVE_DAT_MODE</spirit:name>
+        <spirit:displayName>I2c Slave Dat Mode</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.I2C_SLAVE_DAT_MODE" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>REG_DEVICE_ADDR</spirit:name>
+        <spirit:displayName>Reg Device Addr</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.REG_DEVICE_ADDR" spirit:bitStringLength="16">0x0000</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>SDA_T_POLARITY</spirit:name>
+        <spirit:displayName>Sda T Polarity</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SDA_T_POLARITY" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>DEVICE_ADDR_BIT</spirit:name>
+        <spirit:displayName>Device Addr Bit</spirit:displayName>
+        <spirit:value spirit:format="bitString" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.DEVICE_ADDR_BIT" spirit:bitStringLength="1">&quot;0&quot;</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_8af5a703</spirit:name>
+      <spirit:enumeration>0</spirit:enumeration>
+      <spirit:enumeration>1</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rtl/reset_sync.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/fake_sensor_ar0233.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_b38bd248</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>rtl/reset_sync.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>rtl/fake_sensor_ar0233.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_1_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/fake_sensor_ar0233_v1_3.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_bd58dade</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>fake_sensor_ar0233</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>I2C_SLAVE_ADDR</spirit:name>
+      <spirit:displayName>I2c Slave Addr(7bit device addr)</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_ADDR" spirit:bitStringLength="7">&quot;0010000&quot;</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>I2C_SLAVE_REG_MODE</spirit:name>
+      <spirit:displayName>I2c Slave Reg Mode(0--1 byte reg addr,1--2 byte reg addr)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_REG_MODE" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>I2C_SLAVE_DAT_MODE</spirit:name>
+      <spirit:displayName>I2c Slave Dat Mode(0--1 byte data,1--2 byte data)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.I2C_SLAVE_DAT_MODE" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">0</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.I2C_SLAVE_DAT_MODE">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">i2c_slave_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>REG_DEVICE_ADDR</spirit:name>
+      <spirit:displayName>Reg Device Addr</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.REG_DEVICE_ADDR" spirit:bitStringLength="16">0x0000</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SDA_T_POLARITY</spirit:name>
+      <spirit:displayName>Sda T Polarity(High level or low level as output)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SDA_T_POLARITY" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>DEVICE_ADDR_BIT</spirit:name>
+      <spirit:displayName>Device Addr Bitt(Whether the device address is stored in the upper 7 bits or the lower 7 bits,1 is upper 7 bits)</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.DEVICE_ADDR_BIT" spirit:choiceRef="choice_list_8af5a703" spirit:bitStringLength="1">0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">akintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">virtexuplus58g</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintexu</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>fake_sensor_ar0233</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:vendorDisplayName>figkey</xilinx:vendorDisplayName>
+      <xilinx:coreRevision>1</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:fake_sensor_ar0233:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:fake_sensor_ar0233:1.1</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>xilinx.com:user:fake_sensor_ar0233:1.2</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2023-05-23T06:52:44Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@446dbef5_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63fa6788_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@163eb528_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6808befa_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@385ff67e_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d2b88f_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36eb63cd_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dd662aa_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37b5f96_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3216338c_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1db3aa14_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c11a326_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f019f65_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71d17ee1_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f20e27c_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a62e4c5_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a63229b_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c407d6c_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ee82ee4_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5837952e_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b3025e3_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e88d3d7_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6dc20b86_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f17efdd_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d5f8fb_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35e8d561_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34ec5cfb_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3369ee7a_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33acafa_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8f117_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@725dfbf0_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@391ba044_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f9c5c89_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4676e0bc_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6950813f_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c498aa2_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@472be8d7_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@776aa3bf_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@253d67e0_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75fda3af_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e43a038_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1eba9ffd_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2518be2_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24998375_ARCHIVE_LOCATION">c:/Users/txzing/Desktop/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6364bd79_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5818661a_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@785f9afe_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d0f5b00_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d992d9f_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a71a5d7_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4737fb32_ARCHIVE_LOCATION">d:/workdir/TEST_2CG/tx/desay_ar0233/vivado/ip_repo/ip/fake_sensor_ar0233</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="a13618b4"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f8c33084"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="582b33c8"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="067a546d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="43fe0cbd"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

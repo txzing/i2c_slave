@@ -1,0 +1,95 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed May 24 15:44:54 2023
+# Process ID: 4116
+# Current directory: C:/Users/txzing/Desktop/i2c_hub_x5/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8128 C:\Users\txzing\Desktop\i2c_hub_x5\project_1\project_1.xpr
+# Log file: C:/Users/txzing/Desktop/i2c_hub_x5/project_1/vivado.log
+# Journal file: C:/Users/txzing/Desktop/i2c_hub_x5/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/i2c_hub_x5/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from 'D:/workdir/share/i2c_hub_x4/project_1' since last save.
+WARNING: [Project 1-312] File not found as 'C:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x4.v'; using path 'D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v' instead.
+Scanning sources...
+Finished scanning sources
+INFO: [filemgmt 56-1] IP Repository Path: Directory not found as 'C:/Users/txzing/Desktop/i2c_hub_x4'; using path 'D:/workdir/share/i2c_hub_x4' instead.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/share/i2c_hub_x4'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1306.023 ; gain = 193.125
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x5.v -to_files D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v' with file 'C:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x5.v'.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  C:/Users/txzing/Desktop/i2c_hub_x5 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/i2c_hub_x5'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'c:/Users/txzing/Desktop/i2c_hub_x5' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'c:/Users/txzing/Desktop/i2c_hub_x5/project_1'.)
+ipx::open_ipxact_file C:/Users/txzing/Desktop/i2c_hub_x5/component.xml
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/i2c_hub_x5
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/i2c_hub_x5'
+ipx::unload_core c:/Users/txzing/Desktop/i2c_hub_x5/component.xml
+ipx::edit_ip_in_project -upgrade true -name i2c_hub_x5_v1_1_project -directory C:/Users/txzing/Desktop/i2c_hub_x5/project_1/project_1.tmp/i2c_hub_x5_v1_1_project c:/Users/txzing/Desktop/i2c_hub_x5/component.xml
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'c:/users/txzing/desktop/i2c_hub_x5/project_1/project_1.tmp/i2c_hub_x5_v1_1_project'
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/i2c_hub_x5'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'c:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x4.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'c:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x4.v' does not exist. The file is ignored.
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x5.v
+update_compile_order -fileset sources_1
+set_property top i2c_hub_x5 [current_fileset]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/txzing/Desktop/i2c_hub_x5/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'c:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x4.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'c:/Users/txzing/Desktop/i2c_hub_x5/src/i2c_hub_x4.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'c:/Users/txzing/Desktop/i2c_hub_x5/component.xml' ignored by IP packager.
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 7-560]  
+ipx::add_bus_interface i2c_up4 [ipx::current_core]
+set_property abstraction_type_vlnv xilinx.com:interface:iic_rtl:1.0 [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property bus_type_vlnv xilinx.com:interface:iic:1.0 [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property interface_mode master [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property interface_mode slave [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+ipx::add_port_map SCL_T [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_scl_T [ipx::get_port_maps SCL_T -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::add_port_map SDA_O [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_sda_I [ipx::get_port_maps SDA_O -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::add_port_map SDA_I [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_sda_O [ipx::get_port_maps SDA_I -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::add_port_map SDA_T [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_sda_T [ipx::get_port_maps SDA_T -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::add_port_map SCL_O [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_scl_I [ipx::get_port_maps SCL_O -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::add_port_map SCL_I [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_scl_O [ipx::get_port_maps SCL_I -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+ipx::remove_port_map SCL_T [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+ipx::add_port_map SCL_T [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]
+set_property physical_name upstream4_scl_T [ipx::get_port_maps SCL_T -of_objects [ipx::get_bus_interfaces i2c_up4 -of_objects [ipx::current_core]]]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/i2c_hub_x5
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/i2c_hub_x5'
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May 24 16:03:01 2023...

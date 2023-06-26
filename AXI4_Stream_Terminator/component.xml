@@ -1,0 +1,1011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>xilinx.com</spirit:vendor>
+  <spirit:library>hls</spirit:library>
+  <spirit:name>AXI4_Stream_Terminator</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>ap_clk</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ap_clk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_BUSIF">s_axis_video</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_CLK.ASSOCIATED_RESET">ap_rst_n</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_CLK.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {CLK {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>ap_rst_n</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>ap_rst_n</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.AP_RST_N.POLARITY">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AP_RST_N.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {RST {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0}}}}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>s_axis_video</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="axis_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TVALID</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TREADY</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TDATA</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TDEST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TDEST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TKEEP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TKEEP</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TSTRB</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TUSER</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TUSER</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TLAST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TLAST</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>TID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s_axis_video_TID</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>TDATA_NUM_BYTES</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_VIDEO.TDATA_NUM_BYTES">3</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TDEST_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_VIDEO.TDEST_WIDTH">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_VIDEO.TID_WIDTH">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>TUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_VIDEO.TUSER_WIDTH">1</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>LAYERED_METADATA</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S_AXIS_VIDEO.LAYERED_METADATA">xilinx.com:interface:datatypes:1.0 {TDATA {datatype {name {attribs {resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 24} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}} TUSER {datatype {name {attribs {
+resolve_type immediate dependency {} format string minimum {} maximum {}} value {}} bitwidth {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 1} bitoffset {attribs {resolve_type immediate dependency {} format long minimum {} maximum {}} value 0} integer {signed {attribs {resolve_type immediate dependency {} format bool minimum {} maximum {}} value false}}}}}</spirit:value>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>AXI4_Stream_Terminator</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>943c6eb3</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_documentation</spirit:name>
+        <spirit:displayName>Documentation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:docs.all</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_documentation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_miscfiles</spirit:name>
+        <spirit:displayName>Miscellaneous</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:misc.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_miscfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0f05e113</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_block_diagram</spirit:name>
+        <spirit:displayName>Block Diagram</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:block.diagram</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_block_diagram_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>5fa4aec7</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>21214f7d</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_utilityxitfiles</spirit:name>
+        <spirit:displayName>Utility XIT/TTCL</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xit.util</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_utilityxitfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>0f05e113</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>ap_clk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>ap_rst_n</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TDATA</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(((((spirit:decode(id(&apos;PARAM_VALUE.SAMPLES_PER_CLOCK&apos;))*spirit:decode(id(&apos;PARAM_VALUE.MAXIMUM_DATA_WIDTH&apos;))*spirit:decode(id(&apos;PARAM_VALUE.NUM_VIDEO_COMPONENTS&apos;)))+7)/8)*8)-1)">23</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TVALID</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TREADY</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TKEEP</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;PARAM_VALUE.SAMPLES_PER_CLOCK&apos;))*spirit:decode(id(&apos;PARAM_VALUE.MAXIMUM_DATA_WIDTH&apos;))*spirit:decode(id(&apos;PARAM_VALUE.NUM_VIDEO_COMPONENTS&apos;)))+7)/8)-1)">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TSTRB</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((((spirit:decode(id(&apos;PARAM_VALUE.SAMPLES_PER_CLOCK&apos;))*spirit:decode(id(&apos;PARAM_VALUE.MAXIMUM_DATA_WIDTH&apos;))*spirit:decode(id(&apos;PARAM_VALUE.NUM_VIDEO_COMPONENTS&apos;)))+7)/8)-1)">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TUSER</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TLAST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TID</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s_axis_video_TDEST</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">0</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>NUM_VIDEO_COMPONENTS</spirit:name>
+        <spirit:displayName>Num Video Components</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.NUM_VIDEO_COMPONENTS">3</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>SAMPLES_PER_CLOCK</spirit:name>
+        <spirit:displayName>Samples Per Clock</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.SAMPLES_PER_CLOCK">1</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>MAXIMUM_DATA_WIDTH</spirit:name>
+        <spirit:displayName>Maximum Data Width</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.MAXIMUM_DATA_WIDTH">8</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_8aad6ae4</spirit:name>
+      <spirit:enumeration>1</spirit:enumeration>
+      <spirit:enumeration>2</spirit:enumeration>
+      <spirit:enumeration>4</spirit:enumeration>
+      <spirit:enumeration>8</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_f1407c6a</spirit:name>
+      <spirit:enumeration>8</spirit:enumeration>
+      <spirit:enumeration>10</spirit:enumeration>
+      <spirit:enumeration>12</spirit:enumeration>
+      <spirit:enumeration>16</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>constraints/AXI4_Stream_Terminator_ooc.xdc</spirit:name>
+        <spirit:userFileType>xdc</spirit:userFileType>
+        <spirit:userFileType>USED_IN_out_of_context</spirit:userFileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/AXI4_Stream_Terminator.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_fb1b20f3</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_documentation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>doc/ReleaseNotes.txt</spirit:name>
+        <spirit:userFileType>text</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_miscfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>misc/logo.png</spirit:name>
+        <spirit:userFileType>image</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_block_diagram_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>bd/bd.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/AXI4_Stream_Terminator_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_21214f7d</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_utilityxitfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>misc/logo.png</spirit:name>
+        <spirit:userFileType>image</spirit:userFileType>
+        <spirit:userFileType>LOGO</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>An IP generated by Vivado HLS</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">AXI4_Stream_Terminator_v1_0</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>NUM_VIDEO_COMPONENTS</spirit:name>
+      <spirit:displayName>Num Video Components</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.NUM_VIDEO_COMPONENTS">3</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>SAMPLES_PER_CLOCK</spirit:name>
+      <spirit:displayName>Samples Per Clock</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.SAMPLES_PER_CLOCK" spirit:choiceRef="choice_list_8aad6ae4">1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>MAXIMUM_DATA_WIDTH</spirit:name>
+      <spirit:displayName>Maximum Data Width</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.MAXIMUM_DATA_WIDTH" spirit:choiceRef="choice_list_f1407c6a">8</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">qvirtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">virtexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">zynquplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">kintexuplus</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">virtex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">virtexu</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">virtexuplus58g</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">virtexuplusHBM</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Beta">azynq</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>AXI4_Stream_Terminator</xilinx:displayName>
+      <xilinx:definitionSource>HLS</xilinx:definitionSource>
+      <xilinx:coreRevision>2108021775</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2021-09-06T06:52:45Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4de67230_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d428524_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e31773_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f1287_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b0236e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba1b95e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@498d703c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38a4833_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e1880d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b837ff4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48ade9d3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e8681a1_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@237550ec_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b861392_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3673f407_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d8c1720_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d549842_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12db9459_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69bf7807_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7875c916_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40d6629e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d39969a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5345e3f6_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76ae6496_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d8c3b7b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@493475eb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4956023e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1864f4f5_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77c38bd8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b47c6e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74f404e9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cdf5e29_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@317b2831_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f5f2f24_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ba69244_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@92bdbd7_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11018cde_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15fdc62a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ef7a66_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67b2a1ad_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@558a3bdf_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19310a70_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e87fdd_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@77bfc247_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@132a451c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e2cf652_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@709449ad_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67c96e03_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5528b8fc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627c58f0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78006e10_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35f5ef67_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e775016_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@302f6087_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@631226cb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bf3fad_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ee7ba9f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29348dbf_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ec8b25b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b4f2e13_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@615712d7_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc5e57e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fcad9d0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e9c41c8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a88e0a9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c56d40_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3feb84db_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7267feaf_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e46f73e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7208288a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43eb686e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c489218_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@764d47cb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ed16a5e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60dba1d5_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10c41d2f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a47b78_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@650d3652_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a29beaf_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1200fc7d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b568c1e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@907c83f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ab9798_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@265956bb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74517ca8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a8abc74_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@247e0a4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4af0d7fe_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a53ee50_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58697199_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d767c7b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64e867ed_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fc326c2_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1620160f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56b38476_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fe0752a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b86a059_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef65435_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@143d3f36_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bef8849_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65bdc7e3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@affc733_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38fb8c01_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57401afb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c60ec7_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@581f3904_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70595d22_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e32655c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c060f2b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@559aa89e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dd5cf9f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39171530_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64d3cd30_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d7f9c12_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@476df8ac_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e288e9a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fa07403_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17acddf3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5de6fb00_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c58d81b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47da282_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17971f8d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b5e5860_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f4f96db_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a86e329_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@202b17b0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63021914_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5152fbb8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73f72e46_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f458b56_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5804698_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ca0b451_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b005381_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b5af74e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@452d2999_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79434060_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@75293d1b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a9c43d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62c0f8aa_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c942b19_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67873369_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@288bbc64_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5508db12_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e9c8aae_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@531a4e7a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6174cdf3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c35cf0c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe1b066_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47144e30_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59e0b187_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fcc0de6_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51cdb1f8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@650f0fc9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c50ef8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a0998ee_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41d60d00_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a98033c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54392dc4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6404e5ab_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1273b8e4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26975dec_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50fa8801_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e12b30d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c89b518_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@398eb7ff_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1524142a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@728e5659_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12b5de94_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47a5207f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a6f9543_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea5bad0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24fc8b53_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ab7a1ff_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b525986_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e8b175d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ac1f83a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f0b5b41_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@627bf008_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/myprojects/cfa/src/ip_repo/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f7fec2c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67d46efc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@df7612c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f99d328_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc37260_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c4e1bdb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1133aa74_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b99dee_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2478eabe_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@214a0a73_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53db26b6_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e0c7843_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e8e96cb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34f29f2a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354ce41_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@c31d72e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27e9e253_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a424ca5_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c4210e1_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a7d52bc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35295622_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37373f57_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@297c5fc2_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50558085_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cdcabf4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ad64cc8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@269372f3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2afc622_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20fce953_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b2f2ffb_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2afb0f0f_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cba3c2f_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5930605_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8f9594_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14015eb0_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@600ad938_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dcd6032_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54bd853a_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f89ae71_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fa5c69c_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20b4498c_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b0bb80_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e817bb7_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a072822_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@344f5c39_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79e473b2_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ad7139e_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ac90d1e_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f8d12dc_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a48a782_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ecfc36_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@14beb1c2_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ce96667_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1821f12d_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9c07cc8_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15b0ec3f_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e039edd_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@721e0b07_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5553ed03_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@647b3645_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21e94bf6_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@257bff99_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f43bf1f_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b83becc_ARCHIVE_LOCATION">/home/andy/workdir/HLS/tmp/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@11394c46_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73ba6220_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@adbf506_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c8cf51_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc2cc01_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f650cbb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f61c273_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57c79040_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@416c21c5_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@189bd9fc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@312f1903_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43c22df4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@672d3e00_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b741701_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b0b7434_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@732aa138_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68b1054c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38d14e4b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73b0ee69_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@325269e6_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@291475f5_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d022c0e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61ce01ba_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@119aee85_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@416a8812_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7774692a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38435b67_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@300a09fa_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22849f17_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@cafc363_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26ddc66c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@766a632e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@334e875f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@393e36ad_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@701cbe92_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a070df1_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26957d2f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17727b30_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319d8046_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@451b077f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1815d0e8_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1451fae9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@365ed0a0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@157625a3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5b757a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9e7b715_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50ec75b6_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a7a2686_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@137ef4cb_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d5d60f9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5606ea53_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6880988d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62b1fa70_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7af6bdf_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d3f6a2e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@efe07cc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6155fb63_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51744ed4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fb9e897_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35d94139_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b7921d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1efc79a4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e4451a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cc58d1f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a39168_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6331daf1_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e307012_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55bd23b0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6460b66c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24228af0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@142eb734_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79a1499d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e014dc4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@93bdb4d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ad5c506_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7127db4a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3686ac47_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ab71088_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73df9323_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ebc8202_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@716a8c9a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64b3851_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@105babcc_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e327b2a_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27373a0f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@190d6346_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2940f45b_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1591ac90_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ee1bb2c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5414a31c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7eefab8f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72fa5049_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78310396_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3145dc7_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@210cef09_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1faaa65c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a2935d_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37612c56_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c69182_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@82b0e50_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@20828bde_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ea0fc0_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@704975d4_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5447c865_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b0de12c_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@668ec18_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c899626_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59a2b471_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60b0a50f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24d99694_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23ccdedd_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70aea404_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b190b9e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@21340556_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2153e186_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74ba01ea_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@49fe1139_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e7e41f3_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@30d53104_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7413eb06_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e975a0_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a96014_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bff00fb_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b90cc8f_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73624524_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f195dcd_ARCHIVE_LOCATION">/home/andy/workdir/figkey/HLS/repo/head/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43b09f3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d574d2e_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ec4111f_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@167245b3_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b87e9c9_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@32027547_ARCHIVE_LOCATION">/home/andreas/workdir/figkey/HLS/repo/AXI4_Stream_Terminator/ip</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@745c4a04_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf7f563_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c4abc78_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d58a42f_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b3226b0_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42b9f4c2_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18179065_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17264fb7_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@723d91ea_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ead4773_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22f23bae_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46babeb3_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5caaded7_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a4d455a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b230baa_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56088257_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e6a891e_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48d5208d_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a54576_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2589fa97_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fbad3f5_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1fc93884_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b2461b4_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4358efea_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@468cde1a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e6dae98_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f8adb98_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c1e1b09_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8216af8_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@386890e6_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c9b5a1c_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5756ad93_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8e0ba7_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7df71b21_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f6a807a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10b70aa_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b4e1788_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d305b87_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6763c75c_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ac4734d_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6331a030_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@485c12a9_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3db2259a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@613fbfbe_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@599da887_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65e3c24a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d94b01b_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ce4539e_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56f80347_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e5123d_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a8dab7_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fc2d92e_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@50058837_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55adfb9a_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@302fa2b_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b9d502c_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d84fd_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3190353b_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ec1b364_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@505fc33e_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26107075_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b4659db_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b490b56_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fbe3991_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f045927_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e7aab2e_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17559ae0_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3dd65da4_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d54c457_ARCHIVE_LOCATION">/home/andreas/workdir/tmp/AXI4_Stream_Terminator</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="f52cab38"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="293467af"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="39d64e18"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="32e998b8"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="83576c94"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

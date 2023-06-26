@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon May 22 15:48:55 2023
+# Process ID: 15164
+# Current directory: D:/workdir/share/i2c_hub_x4/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent324 D:\workdir\share\i2c_hub_x4\project_1\project_1.xpr
+# Log file: D:/workdir/share/i2c_hub_x4/project_1/vivado.log
+# Journal file: D:/workdir/share/i2c_hub_x4/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/workdir/share/i2c_hub_x4/project_1/project_1.xpr
+INFO: [Project 1-313] Project file moved from '/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub/project_1' since last save.
+CRITICAL WARNING: [Project 1-311] Could not find the file 'D:/workdir/share/i2c_hub_x4/src/i2c_hub.v', nor could it be found using path 'D:/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub/src/i2c_hub.v'.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IP Repository Path: Could not find the directory 'D:/workdir/share/i2c_hub', nor could it be found using path 'D:/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub'.
+INFO: [Project 1-230] Project 'project_1.xpr' upgraded for this version of Vivado.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/workdir/share/i2c_hub'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+update_files -from_files D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v -to_files D:/workdir/share/i2c_hub_x4/src/i2c_hub.v -filesets [get_filesets *]
+INFO: [filemgmt 20-762] Replacing file 'D:/workdir/share/i2c_hub_x4/src/i2c_hub.v' with file 'D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v'.
+update_compile_order -fileset sources_1
+set_property part xczu2cg-sfvc784-1-i [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/workdir/share/i2c_hub'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+set_property  ip_repo_paths  D:/workdir/share/i2c_hub_x4 [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/share/i2c_hub_x4'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/workdir/share/i2c_hub_x4' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/workdir/share/i2c_hub_x4/project_1'.)
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/share/i2c_hub_x4'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/workdir/share/i2c_hub_x4' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/workdir/share/i2c_hub_x4/project_1'.)
+ipx::edit_ip_in_project -upgrade true -name i2c_hub_v1_1_project -directory D:/workdir/share/i2c_hub_x4/project_1/project_1.tmp/i2c_hub_v1_1_project d:/workdir/share/i2c_hub_x4/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/share/i2c_hub_x4'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/workdir/share/i2c_hub_x4' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/workdir/share/i2c_hub_x4/project_1/project_1.tmp/i2c_hub_v1_1_project'.)
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/workdir/share/i2c_hub_x4/src/i2c_hub.v' does not exist. The file is ignored.
+CRITICAL WARNING: [IP_Flow 19-3667] Component file 'd:/workdir/share/i2c_hub_x4/src/i2c_hub.v' does not exist. The file is ignored.
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes D:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v
+update_compile_order -fileset sources_1
+set_property top i2c_hub_x4 [current_fileset]
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/workdir/share/i2c_hub_x4/component.xml' ignored by IP packager.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagesynthesis (Synthesis)': File 'd:/workdir/share/i2c_hub_x4/src/i2c_hub.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+WARNING: [IP_Flow 19-5109] File Group 'xilinx_anylanguagebehavioralsimulation (Simulation)': File 'd:/workdir/share/i2c_hub_x4/src/i2c_hub.v' does not exist in the project sources. It has been removed from the packaged IP. If still required, please add this file to the project, merge sources and re-package.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/workdir/share/i2c_hub_x4/component.xml' ignored by IP packager.
+INFO: [IP_Flow 7-560]  
+INFO: [IP_Flow 7-560]  
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/share/i2c_hub_x4
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/workdir/share/i2c_hub_x4'
+ipx::edit_ip_in_project -upgrade true -name i2c_hub_v1_1_project -directory D:/workdir/share/i2c_hub_x4/project_1/project_1.tmp/i2c_hub_v1_1_project d:/workdir/share/i2c_hub_x4/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/share/i2c_hub_x4'.
+WARNING: [IP_Flow 19-3656] If you move the project, the path for repository 'd:/workdir/share/i2c_hub_x4' may become invalid. A better location for the repository would be in a path adjacent to the project. (Current project location is 'd:/workdir/share/i2c_hub_x4/project_1/project_1.tmp/i2c_hub_v1_1_project'.)
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [d:/workdir/share/i2c_hub_x4/src/i2c_hub_x4.v:]
+update_compile_order -fileset sources_1
+set_property previous_version_for_upgrade {xilinx.com:user:i2c_hub:1.0 alinx.com.cn:user:i2c_hub:1.0 alinx.com.cn:user:i2c_hub:1.1} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/workdir/share/i2c_hub_x4
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/workdir/share/i2c_hub_x4'
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon May 22 15:55:01 2023...

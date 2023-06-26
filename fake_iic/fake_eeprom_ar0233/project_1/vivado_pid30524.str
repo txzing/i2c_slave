@@ -1,0 +1,547 @@
+/*
+
+Xilinx Vivado v2020.1 (64-bit) [Major: 2020, Minor: 1]
+SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+
+Process ID (PID): 30524
+License: Customer
+
+Current time: 	Tue May 23 10:56:12 CST 2023
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 16
+
+Screen size: 1920x1080
+Screen resolution (DPI): 100
+Available screens: 2
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	D:/Vivado/Vivado/2020.1/tps/win64/jre9.0.4
+Java executable location: 	D:/Vivado/Vivado/2020.1/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	txzing
+User home directory: C:/Users/txzing
+User working directory: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: D:/Vivado/Vivado
+HDI_APPROOT: D:/Vivado/Vivado/2020.1
+RDI_DATADIR: D:/Vivado/Vivado/2020.1/data
+RDI_BINDIR: D:/Vivado/Vivado/2020.1/bin
+
+Vivado preferences file location: C:/Users/txzing/AppData/Roaming/Xilinx/Vivado/2020.1/vivado.xml
+Vivado preferences directory: C:/Users/txzing/AppData/Roaming/Xilinx/Vivado/2020.1/
+Vivado layouts directory: C:/Users/txzing/AppData/Roaming/Xilinx/Vivado/2020.1/data/layouts
+PlanAhead jar file location: 	D:/Vivado/Vivado/2020.1/lib/classes/planAhead.jar
+Vivado log file location: 	C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/vivado.log
+Vivado journal file location: 	C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/vivado.jou
+Engine tmp dir: 	C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/.Xil/Vivado-30524-TX
+
+Xilinx Environment Variables
+----------------------------
+XILINX: D:/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_DSP: D:/Vivado/Vivado/2020.1/ids_lite/ISE
+XILINX_PLANAHEAD: D:/Vivado/Vivado/2020.1
+XILINX_SDK: D:/Vivado/Vitis/2020.1
+XILINX_VITIS: D:/Vivado/Vitis/2020.1
+XILINX_VIVADO: D:/Vivado/Vivado/2020.1
+XILINX_VIVADO_HLS: D:/Vivado/Vivado/2020.1
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,093 MB
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// [GUI Memory]: 109 MB (+112198kb) [00:00:05]
+// [Engine Memory]: 1,093 MB (+994920kb) [00:00:05]
+// bz (cs):  Open Project : addNotify
+// Opening Vivado Project: C:\Users\txzing\Desktop\fake_eeprom_ar0233\project_1\project_1.xpr. Version: Vivado v2020.1 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.xpr 
+// Tcl Message: INFO: [Project 1-313] Project file moved from 'C:/Users/tangx/Desktop/fake_eeprom_0x03C10/project_1' since last save. 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 121 MB (+6778kb) [00:00:10]
+// WARNING: HEventQueue.dispatchEvent() is taking  2110 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,093 MB. GUI used memory: 57 MB. Current time: 5/23/23, 10:56:15 AM CST
+// Project name: project_1; location: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1; part: xazu3eg-sfvc784-1-i
+// Tcl Message: open_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1111.023 ; gain = 0.000 
+dismissDialog("Open Project"); // bz (cs)
+// Tcl Command: 'rdi::info_commands {device::*}'
+// Tcl Command: 'rdi::info_commands {debug::*}'
+// Tcl Command: 'rdi::info_commands {*}'
+// a (cs): Critical Messages: addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1, true); // B (F, cs) - Node
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files]", 1); // B (F, cs)
+// [GUI Memory]: 133 MB (+5764kb) [00:00:23]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, fake_eeprom_0x03C10.v]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Non-module Files, fake_eeprom_0x03C10.v]", 2, false, false, false, false, true, false); // B (F, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+setFileChooser("D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v");
+// 'dR' command handler elapsed time: 6 seconds
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_files -from_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -to_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v' with file 'D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v'. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_sensor_imx623 (fake_sensor_imx623.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_sensor_imx623 (fake_sensor_imx623.v)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenuItem(PAResourceCommand.PACommandNames_SRC_REPLACE_FILE, "Replace File..."); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SRC_REPLACE_FILE
+// Elapsed time: 14 seconds
+setFileChooser("C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v");
+// 'dR' command handler elapsed time: 14 seconds
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_files -from_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v -to_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -filesets [get_filesets *] 
+// Tcl Message: INFO: [filemgmt 20-762] Replacing file 'D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v' with file 'C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v'. 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 14, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// f (cs): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bz (cs):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cs)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 10 
+// Tcl Message: [Tue May 23 10:57:23 2023] Launched synth_1... Run output will be captured here: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bz (cs)
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STATUS_CHANGE
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 82 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, Settings]", 1, false); // u (J, cs)
+// Run Command: RDIResourceCommand.RDICommands_SETTINGS
+// d (cs): Settings: addNotify
+expandTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP]", 6); // B (E, d)
+selectTree(PAResourceQtoS.SettingsDialog_PROJECT_TREE, "[projectRoot, IP, Repository]", 7, false); // B (E, d)
+selectButton(RDIResource.AbstractCombinedPanel_REMOVE_SELECTED_ELEMENTS, "Remove"); // E (g, d)
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  {} [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+selectButton(PAResourceQtoS.SettingsProjectIPRepositoryPage_ADD_REPOSITORY, "Add Repository"); // E (g, d)
+setFolderChooser("C:/Users/txzing/Desktop/fake_eeprom_ar0233");
+// TclEventType: PROJECT_CHANGE
+// Tcl Message: set_property  ip_repo_paths  C:/Users/txzing/Desktop/fake_eeprom_ar0233 [current_project] 
+// TclEventType: CREATE_IP_CATALOG
+// [GUI Memory]: 146 MB (+6642kb) [00:02:52]
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'. 
+// c (d): Add Repository: addNotify
+selectButton(RDIResource.AddRepositoryInfoDialog_OK, "OK"); // a (c)
+dismissDialog("Add Repository"); // c (d)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (d)
+dismissDialog("Settings"); // d (cs)
+// Elapsed time: 12 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Project Manager, IP Catalog]", 4, false); // u (J, cs)
+// Run Command: PAResourceCommand.PACommandNames_CORE_GEN
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "User Repository ;  ;  ;  ; ", 0); // L (J, cs)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 1); // L (J, cs)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_0x03C10 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_0x03C10:1.1", 2, "fake_eeprom_0x03C10", 0, false); // L (J, cs)
+// [GUI Memory]: 162 MB (+9217kb) [00:03:18]
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_0x03C10 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_0x03C10:1.1", 2, "fake_eeprom_0x03C10", 0, false, false, false, false, true, false); // L (J, cs) - Popup Trigger
+// HMemoryUtils.trashcanNow. Engine heap size: 1,116 MB. GUI used memory: 80 MB. Current time: 5/23/23, 10:59:23 AM CST
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cs): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// bz (cs):  Edit in IP Packager : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1743 ms.
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'c:/users/txzing/desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03c10_v1_1_project' 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: LOAD_FEATURE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// 'i' command handler elapsed time: 6 seconds
+dismissDialog("Edit in IP Packager"); // bz (cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// G (cs): Invalid Top Module: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+dismissDialog("Invalid Top Module"); // G (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources]", 0, true); // B (F, cs) - Node
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // E (g, cs)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (cs): Add Sources: addNotify
+// G (cs): Invalid Top Module: addNotify
+dismissDialog("Invalid Top Module"); // G (cs)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_ADD_OR_CREATE_SOURCE_FILE, "Add"); // E (g, c)
+selectMenuItem(PAResourceQtoS.SrcChooserPanel_ADD_HDL_AND_NETLIST_FILES_TO_YOUR_PROJECT, "Add Files..."); // ai (ao, c)
+setFileChooser("C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v");
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_MAKE_LOCAL_COPY_OF_THESE_SOURCES_INTO, "Copy sources into IP Directory", false); // g (bm, c): FALSE
+selectCheckBox(PAResourceQtoS.SrcChooserPanel_SCAN_AND_ADD_RTL_INCLUDE_FILES_INTO, "Scan and add RTL include files into project", true); // g (bm, c): TRUE
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 14 seconds
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+dismissDialog("Add Sources"); // c (cs)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Add Sources  : addNotify
+// Tcl Message: add_files -norecurse -scan_for_includes C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v 
+dismissDialog("Add Sources"); // bz (cs)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// G (cs): Invalid Top Module: addNotify
+// Tcl Message: update_compile_order -fileset sources_1 
+dismissDialog("Invalid Top Module"); // G (cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1, true, false, false, false, true, false); // B (F, cs) - Popup Trigger - Node
+selectMenu(PAResourceCommand.PACommandNames_AUTO_UPDATE_HIER, "Hierarchy Update"); // af (ao, cs)
+selectMenu(PAResourceQtoS.SrcMenu_IP_HIERARCHY, "IP Hierarchy"); // af (ao, cs)
+selectMenuItem(PAResourceCommand.PACommandNames_SET_AS_TOP, "Set as Top"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_SET_AS_TOP
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: set_property top fake_eeprom_ar0233 [current_fileset] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1, true); // B (F, cs) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v), u_reset_sync : reset_sync (reset_sync.v)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v), u_reset_sync : reset_sync (reset_sync.v)]", 2, false); // B (F, cs)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, fake_eeprom_ar0233 (fake_eeprom_ar0233.v)]", 1, true); // B (F, cs) - Node
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Simulation ;  ;  ; false ;  ;  ; fake_eeprom_0x03C10", 2); // M (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,138 MB. GUI used memory: 98 MB. Current time: 5/23/23, 11:00:18 AM CST
+expandTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Synthesis ;  ;  ; false ;  ;  ; fake_eeprom_0x03C10", 1); // M (J, cs)
+collapseTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Synthesis ;  ;  ; false ;  ;  ; fake_eeprom_0x03C10", 1); // M (J, cs)
+collapseTreeTable(PAResourceEtoH.FileGroupFacetTable_FILE_GROUP_FACET_TABLE, "Simulation ;  ;  ; false ;  ;  ; fake_eeprom_0x03C10", 2); // M (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cs)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// CommandFailedException: ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.  
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2020.1 (64-bit)
+# SW Build: 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build: 2902112 on Wed May 27 22:43:36 MDT 2020
+# Current time: Tue May 23 11:00:22 CST 2023
+# Process ID (PID): 30524
+# OS: Windows 10
+# User: txzing
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+ui.frmwork.CommandFailedException:  ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors.
+ (See C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/vivado_pid30524.debug)
+*/
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 7-560]   INFO: [IP_Flow 7-560]   INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'I2C_SLAVE_REG_MODE' is inferred to be bitString format. INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'I2C_SLAVE_DAT_MODE' is inferred to be bitString format. INFO: [IP_Flow 19-4821] For module 'fake_eeprom_0x03C10', parameter 'SDA_T_POLARITY' is inferred to be bitString format. 
+// Tcl Message: ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors. 
+// HOptionPane Error: 'ERROR: [Common 17-39] 'ipx::merge_project_changes' failed due to earlier errors. (Vivado v2020.1 (64-bit))'
+selectButton("OptionPane.button", "OK"); // JButton (v, B)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+// Elapsed time: 157 seconds
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_ADDR ;  ; I2c Slave Addr ; 1010000 ; 7 ; bitString ; default ;  ;  ;  ; ", 1, "I2C_SLAVE_ADDR", 0, false); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_REG_MODE ;  ; I2c Slave Reg Mode ; 1 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 2, "I2C_SLAVE_REG_MODE", 0, false); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SDA_T_POLARITY ;  ; Sda T Polarity ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 4, "SDA_T_POLARITY", 0, false); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_ADDR ;  ; I2c Slave Addr ; 1010000 ; 7 ; bitString ; default ;  ;  ;  ; ", 1, "I2C_SLAVE_ADDR", 0, false); // M (J, cs)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_ADDR ;  ; I2c Slave Addr ; 1010000 ; 7 ; bitString ; default ;  ;  ;  ; ", 1); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_ADDR ;  ; I2c Slave Addr ; 1010000 ; 7 ; bitString ; default ;  ;  ;  ; ", 1, "I2C_SLAVE_ADDR", 0, false, false, false, false, false, true); // M (J, cs) - Double Click
+// W (cs): Edit IP Parameter: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (W)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// W (cs): Edit IP Parameter: addNotify
+// Tcl Message: set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ] 
+dismissDialog("Edit IP Parameter"); // W (cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_REG_MODE ;  ; I2c Slave Reg Mode ; 1 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 2, "I2C_SLAVE_REG_MODE", 0, false); // M (J, cs)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_REG_MODE ;  ; I2c Slave Reg Mode ; 1 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 2); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_REG_MODE ;  ; I2c Slave Reg Mode ; 1 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 2, "I2C_SLAVE_REG_MODE", 0, false, false, false, false, false, true); // M (J, cs) - Double Click
+// W (cs): Edit IP Parameter: addNotify
+selectComboBox(PAResourceEtoH.EditParameterDialog_DEFAULT_VALUE, "1", 1); // e (Q, W)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (W)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// W (cs): Edit IP Parameter: addNotify
+// Tcl Message: set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ] 
+// Tcl Message: set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]] 
+dismissDialog("Edit IP Parameter"); // W (cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false); // M (J, cs)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3); // M (J, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false, false, false, false, false, true); // M (J, cs) - Double Click
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false); // M (J, cs)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false, false, false, false, false, true); // M (J, cs) - Double Click
+// W (cs): Edit IP Parameter: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (W)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// W (cs): Edit IP Parameter: addNotify
+// Tcl Message: set_property layout {horizontal} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ] 
+// Tcl Message: set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]] 
+dismissDialog("Edit IP Parameter"); // W (cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "I2C_SLAVE_DAT_MODE ;  ; I2c Slave Dat Mode ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 3, "I2C_SLAVE_DAT_MODE", 0, false); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SDA_T_POLARITY ;  ; Sda T Polarity ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 4, "SDA_T_POLARITY", 0, false); // M (J, cs)
+expandTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SDA_T_POLARITY ;  ; Sda T Polarity ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 4); // M (J, cs)
+selectTreeTable(PAResourceOtoP.ParameterFacetTable_PARAMETER_FACET_TABLE, "SDA_T_POLARITY ;  ; Sda T Polarity ; 0 ; 1 ; long ; default ; 0 1 ;  ;  ; ", 4, "SDA_T_POLARITY", 0, false, false, false, false, false, true); // M (J, cs) - Double Click
+// W (cs): Edit IP Parameter: addNotify
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (W)
+// TclEventType: IPGUI_UPDATE_GUI_ELEMENT
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// W (cs): Edit IP Parameter: addNotify
+// Tcl Message: set_property layout {vertical} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ] 
+// Tcl Message: set_property value 0 [ipx::get_user_parameters SDA_T_POLARITY -of_objects [ipx::current_core]] 
+// Tcl Message: set_property value 0 [ipx::get_hdl_parameters SDA_T_POLARITY -of_objects [ipx::current_core]] 
+dismissDialog("Edit IP Parameter"); // W (cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ar (J, cs)
+// Elapsed time: 15 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 5 [ipx::current_core] 
+// Tcl Message: ipx::update_source_project_archive -component [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// ax (cs): Package IP: addNotify
+// [Engine Memory]: 1,148 MB (+92kb) [00:07:51]
+// a (cs): Critical Messages: addNotify
+// TclEventType: FILE_SET_CHANGE
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cs)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (ax)
+dismissDialog("Package IP"); // ax (cs)
+// bz (cs):  Package IP : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (v, B)
+// [GUI Memory]: 178 MB (+7999kb) [00:07:55]
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,148 MB. GUI used memory: 112 MB. Current time: 5/23/23, 11:03:59 AM CST
+// Tcl Message: close_project -delete 
+dismissDialog("Edit IP Parameter"); // W (cs)
+dismissDialog("Edit IP Parameter"); // W (cs)
+dismissDialog("Edit IP Parameter"); // W (cs)
+dismissDialog("Edit IP Parameter"); // W (cs)
+dismissDialog("Package IP"); // bz (cs)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233' 
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 1); // L (J, cs)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_0x03C10 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_0x03C10:1.1", 2, "fake_eeprom_0x03C10", 0, false); // L (J, cs)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_0x03C10 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_0x03C10:1.1", 2, "fake_eeprom_0x03C10", 0, false, false, false, false, true, false); // L (J, cs) - Popup Trigger
+selectMenuItem(PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER, "Edit in IP Packager"); // ai (ao, cs)
+// Run Command: PAResourceCommand.PACommandNames_EDIT_IN_IP_PACKAGER
+// k (cs): Edit in IP Packager: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (k)
+// bz (cs):  Edit in IP Packager : addNotify
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml 
+// Tcl Message: INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. Current project path is 'c:/users/txzing/desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03c10_v1_1_project' 
+// TclEventType: PROJECT_NEW
+// WARNING: HEventQueue.dispatchEvent() is taking  1716 ms.
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'. 
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233'. INFO: [IP_Flow 19-795] Syncing license key meta-data 
+// 'i' command handler elapsed time: 11 seconds
+dismissDialog("Edit in IP Packager"); // bz (cs)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: update_compile_order -fileset sources_1 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,160 MB. GUI used memory: 119 MB. Current time: 5/23/23, 11:04:28 AM CST
+// Elapsed time: 19 seconds
+setText(PAResourceItoN.IdentificationContentPanel_NAME, "fake_eeprom_ar0233"); // D (al, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+setText(PAResourceItoN.IdentificationContentPanel_DISPLAY_NAME, "fake_eeprom_ar0233"); // D (al, cs)
+setText(PAResourceItoN.IdentificationContentPanel_DESCRIPTION, "fake_eeprom_ar0233"); // D (al, cs)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+setText(PAResourceItoN.IdentificationContentPanel_VENDOR_DISPLAY_NAME, "figkey"); // i (Q, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Elapsed time: 11 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ar (J, cs)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ar (J, cs)
+// TclEventType: IP_LOCK_CHANGE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (J, cs)
+selectButton(PAResourceQtoS.ReviewContentPanel_PACKAGE_IP, "Package IP"); // a (c, cs)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property previous_version_for_upgrade {xilinx.com:user:fake_eeprom_0x03C10:1.0 xilinx.com:user:fake_eeprom_0x03C10:1.1} [ipx::current_core] 
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 1 [ipx::current_core] 
+// TclEventType: PACKAGER_OBJECT_DELETE
+// TclEventType: PACKAGER_OBJECT_ADD
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// bz (cs):  Package IP : addNotify
+selectButton("OptionPane.button", "Yes"); // JButton (v, B)
+// Tcl Message: ipx::move_temp_component_back -component [ipx::current_core] 
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,163 MB. GUI used memory: 123 MB. Current time: 5/23/23, 11:05:17 AM CST
+// Tcl Message: close_project -delete 
+dismissDialog("Package IP"); // bz (cs)
+// TclEventType: CREATE_IP_CATALOG
+// Tcl Message: update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository 'c:/Users/txzing/Desktop/fake_eeprom_ar0233' 
+// Elapsed time: 16 seconds
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 1, "UserIP", 0, true); // L (J, cs) - Node
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "UserIP ;  ;  ;  ; ", 1); // L (J, cs)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_ar0233 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_ar0233:1.1", 2, "fake_eeprom_ar0233", 0, false); // L (J, cs)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_ar0233 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_ar0233:1.1", 2); // L (J, cs)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "fake_eeprom_ar0233 ;  ; Production ; Included ; xilinx.com:user:fake_eeprom_ar0233:1.1", 2, "fake_eeprom_ar0233", 0, false, false, false, false, false, true); // L (J, cs) - Double Click
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_CORE
+// [GUI Memory]: 192 MB (+5381kb) [00:09:31]
+// r (cs): Customize IP: addNotify
+dismissDialog("Customize IP"); // r (cs)

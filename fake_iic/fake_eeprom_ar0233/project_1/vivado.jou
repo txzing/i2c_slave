@@ -1,0 +1,65 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Tue May 23 10:56:00 2023
+# Process ID: 30524
+# Current directory: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17804 C:\Users\txzing\Desktop\fake_eeprom_ar0233\project_1\project_1.xpr
+# Log file: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/vivado.log
+# Journal file: C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+update_files -from_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -to_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_0x03C10.v -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_files -from_files C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v -to_files D:/workdir/TEST_2CG/tx/desay_imx623/vivado/ip_repo/ip/fake_sensor_imx623/rtl/fake_sensor_imx623.v -filesets [get_filesets *]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+set_property  ip_repo_paths  {} [current_project]
+update_ip_catalog
+set_property  ip_repo_paths  C:/Users/txzing/Desktop/fake_eeprom_ar0233 [current_project]
+update_ip_catalog
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml
+update_compile_order -fileset sources_1
+add_files -norecurse -scan_for_includes C:/Users/txzing/Desktop/fake_eeprom_ar0233/rtl/fake_eeprom_ar0233.v
+update_compile_order -fileset sources_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top fake_eeprom_ar0233 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property widget {hexEdit} [ipgui::get_guiparamspec -name "I2C_SLAVE_ADDR" -component [ipx::current_core] ]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "I2C_SLAVE_REG_MODE" -component [ipx::current_core] ]
+set_property value 1 [ipx::get_user_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property value 1 [ipx::get_hdl_parameters I2C_SLAVE_REG_MODE -of_objects [ipx::current_core]]
+set_property layout {horizontal} [ipgui::get_guiparamspec -name "I2C_SLAVE_DAT_MODE" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters I2C_SLAVE_DAT_MODE -of_objects [ipx::current_core]]
+set_property layout {vertical} [ipgui::get_guiparamspec -name "SDA_T_POLARITY" -component [ipx::current_core] ]
+set_property value 0 [ipx::get_user_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property value 0 [ipx::get_hdl_parameters SDA_T_POLARITY -of_objects [ipx::current_core]]
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233
+ipx::edit_ip_in_project -upgrade true -name fake_eeprom_0x03C10_v1_1_project -directory C:/Users/txzing/Desktop/fake_eeprom_ar0233/project_1/project_1.tmp/fake_eeprom_0x03C10_v1_1_project c:/Users/txzing/Desktop/fake_eeprom_ar0233/component.xml
+update_compile_order -fileset sources_1
+set_property previous_version_for_upgrade {xilinx.com:user:fake_eeprom_0x03C10:1.0 xilinx.com:user:fake_eeprom_0x03C10:1.1} [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/Users/txzing/Desktop/fake_eeprom_ar0233

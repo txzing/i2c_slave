@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>figkey</spirit:vendor>
+  <spirit:library>figkey</spirit:library>
+  <spirit:name>i2c_hub_x3</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>i2c_up0</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_sda_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_sda_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_sda_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_scl_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_scl_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream0_scl_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>i2c_down</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_sda_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_sda_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_sda_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_scl_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_scl_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>downstream_scl_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>i2c_up1</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_sda_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_sda_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_sda_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_scl_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_scl_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream1_scl_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>i2c_up2</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="iic_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_sda_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_sda_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SDA_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_sda_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_O</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_scl_I</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_I</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_scl_O</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>SCL_T</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>upstream2_scl_T</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagesynthesis</spirit:name>
+        <spirit:displayName>Synthesis</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>i2c_hub_x3</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagesynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>daa8bd4f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_anylanguagebehavioralsimulation</spirit:name>
+        <spirit:displayName>Simulation</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>Verilog</spirit:language>
+        <spirit:modelName>i2c_hub_x3</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>daa8bd4f</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_xpgui</spirit:name>
+        <spirit:displayName>UI Layout</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:xgui.ui</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_xpgui_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>viewChecksum</spirit:name>
+            <spirit:value>f92e9879</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>upstream0_scl_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream0_scl_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream0_scl_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream0_sda_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream0_sda_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream0_sda_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_scl_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_scl_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_scl_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_sda_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_sda_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream1_sda_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_scl_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_scl_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_scl_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_sda_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_sda_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>upstream2_sda_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_scl_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_scl_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_scl_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_sda_T</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_sda_I</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>downstream_sda_O</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_anylanguagesynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_anylanguagebehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+  </spirit:model>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagesynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/i2c_hub_x3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_daa8bd4f</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_anylanguagebehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>src/i2c_hub_x3.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_ipstatic</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_xpgui_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>xgui/i2c_hub_x3_v1_0.tcl</spirit:name>
+        <spirit:fileType>tclSource</spirit:fileType>
+        <spirit:userFileType>CHECKSUM_f92e9879</spirit:userFileType>
+        <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>single i2c port access to internal x3 i2c slave devices, or internal master device access internal/external slave devices</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">i2c_hub_v1_0</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:supportedFamilies>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">kintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qkintex7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">artix7l</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qartix7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">qzynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">azynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">spartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">aspartan7</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Production">zynquplus</xilinx:family>
+      </xilinx:supportedFamilies>
+      <xilinx:taxonomies>
+        <xilinx:taxonomy>/UserIP</xilinx:taxonomy>
+      </xilinx:taxonomies>
+      <xilinx:displayName>i2c_hub_x3_v1_0</xilinx:displayName>
+      <xilinx:definitionSource>package_project</xilinx:definitionSource>
+      <xilinx:vendorDisplayName>FIGKEY</xilinx:vendorDisplayName>
+      <xilinx:vendorURL>http://www.figkey.com</xilinx:vendorURL>
+      <xilinx:coreRevision>4</xilinx:coreRevision>
+      <xilinx:upgrades>
+        <xilinx:canUpgradeFrom>xilinx.com:user:i2c_hub:1.0</xilinx:canUpgradeFrom>
+        <xilinx:canUpgradeFrom>alinx.com.cn:user:i2c_hub:1.0</xilinx:canUpgradeFrom>
+      </xilinx:upgrades>
+      <xilinx:coreCreationDateTime>2023-03-17T08:53:37Z</xilinx:coreCreationDateTime>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="nopcore"/>
+        <xilinx:tag xilinx:name="xilinx.com:user:i2c_hub:1.0_ARCHIVE_LOCATION">f:/ax7015/course_s2/04_ov5640_single/repo/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="alinx.com.cn:user:i2c_hub:1.0_ARCHIVE_LOCATION">f:/ax7015/course_s2/04_ov5640_single/repo/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57594786_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3068c37e_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a39f6d_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@299169e9_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b76c2f9_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65f0dacd_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3384690d_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ead166a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@27227215_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5280649a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3533f140_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35d0f75b_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e2c4c8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca99bc5_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@561be04_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a1104b8_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4472dce2_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e091a28_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ed47f96_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6fd98844_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eb7238_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ea73533_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a7a8b18_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ad84551_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e0b1e7a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ecf2ad4_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@98b5a13_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@364a666c_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56181cf4_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d7761f3_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43bd3377_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@12d700f_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e9fa014_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@94c5c6d_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ea8d48_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@39401659_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2e90c4_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c85aa5_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7e5ce17b_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fc04792_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4003e19f_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@17269b21_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15e20d45_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@68696205_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/tmp/proj/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@10a27ad_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@224f961f_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@63be8768_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3efbbf76_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1edfcfd6_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ac4d82a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@33bd8088_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@394f59f9_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73112481_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@512be6eb_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46d2e329_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ef0ed9e_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67de9e87_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebac534_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e5ba23b_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36f9bebd_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67893d3b_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2420be07_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@361c433a_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a613967_ARCHIVE_LOCATION">/home/andy/workdir/figkey/FpdLinkToHDMI/archive/proj16_i2c_slave_4reg4dat_out2pin/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a73ea8b_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78670a84_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b8bfbbd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@743fd85_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@31e786ab_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62e530e0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54edd318_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bcb4433_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71155d3e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@a004d8a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57777edd_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a31ddd8_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@13840c36_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1da6c30a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@adc07b3_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a75cc6d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e2eb86d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6671086f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@231d6338_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5063d149_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52cba7fb_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2310071a_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67461e5e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3780afb1_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@290b47b0_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4217aeee_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d3345d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fde2233_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@60bca6ad_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3948d36e_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@153ec32f_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@647acddf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a5efbd7_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3fecbdaf_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@18c7b939_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29b2e732_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c8af601_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cecbc4d_ARCHIVE_LOCATION">c:/Users/tangx/Desktop/Test_3EG/alinx/tpg_csitx_96717x1_raw12/vivado/ip_repo/ip/i2c_hub</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@480c8659_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@59566a23_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79cad52a_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@792e3e0_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d601d9_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e96aa5f_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22dfa494_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c06b911_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23157ba9_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2def7e02_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ee2154c_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6914ab38_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22dbc461_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e1a6a9e_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@580f2649_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6925a2a7_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7def6e3c_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@319c723a_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3daa0fc4_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f70145c_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dca9e3e_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73071e4d_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f250626_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@701b6947_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62df4dda_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c948e10_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3999e683_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@72a08896_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@22373559_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67e0dba7_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@490b0a43_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@45553e7a_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f31d8c_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c46fc69_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7be8102c_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76a8f63f_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ee2d96_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c37f7b3_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae85d50_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62cf7d0e_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bfd4e88_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9a1b963_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4baffe7a_ARCHIVE_LOCATION">/opt/workdir/figkey/projects/DesaySV/HIL-Cam/camera_debug/max96717_tx_x4/vivado/ip_repo/ip/i2c_hub_x3</xilinx:tag>
+      </xilinx:tags>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2020.1</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="811ede31"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="9f0ec532"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="bb69aeae"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="5930bab6"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

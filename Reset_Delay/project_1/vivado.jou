@@ -1,0 +1,55 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon Jun 26 09:43:12 2023
+# Process ID: 14004
+# Current directory: C:/Users/txzing/Desktop/Reset_Delay/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19008 C:\Users\txzing\Desktop\Reset_Delay\project_1\project_1.xpr
+# Log file: C:/Users/txzing/Desktop/Reset_Delay/project_1/vivado.log
+# Journal file: C:/Users/txzing/Desktop/Reset_Delay/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/Reset_Delay/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+ipx::package_project -root_dir c:/users/txzing/desktop -vendor xilinx.com -library user -taxonomy /UserIP
+ipx::remove_file vivado/bd/system.tcl [ipx::get_file_groups xilinx_anylanguagesynthesis -of_objects [ipx::current_core]]
+ipx::remove_file vivado/bd/system.tcl [ipx::get_file_groups xilinx_anylanguagebehavioralsimulation -of_objects [ipx::current_core]]
+ipx::add_file_group -type example {} [ipx::current_core]
+ipx::remove_file_group xilinx_examples [ipx::current_core]
+ipx::add_file_group -type examples_script {} [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::add_file C:/Users/txzing/Desktop/vivado/bd/system.tcl [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]
+set_property type tclSource [ipx::get_files vivado/bd/system.tcl -of_objects [ipx::get_file_groups bd_tcl -of_objects [ipx::current_core]]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "FREQ_HZ" -component [ipx::current_core] ]
+set_property value 100000000 [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value 100000000 [ipx::get_hdl_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property enablement_value false [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_hdl_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property value_bit_string_length 0 [ipx::get_user_parameters FREQ_HZ -of_objects [ipx::current_core]]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "FREQ_HZ" -component [ipx::current_core] ]
+set_property widget {textEdit} [ipgui::get_guiparamspec -name "RST_MS_MAX" -component [ipx::current_core] ]
+set_property value 20 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value 20 [ipx::get_hdl_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_format long [ipx::get_hdl_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_bit_string_length 0 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_type range_long [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_range_minimum 1 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+set_property value_validation_range_maximum 1000 [ipx::get_user_parameters RST_MS_MAX -of_objects [ipx::current_core]]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property  ip_repo_paths  c:/users/txzing/desktop [current_project]
+update_ip_catalog
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path c:/users/txzing/desktop
+close_project
